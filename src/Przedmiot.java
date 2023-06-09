@@ -1,3 +1,4 @@
+package src;
 public class Przedmiot {
     private int cena = 50;
     public Przedmiot(int cena){
