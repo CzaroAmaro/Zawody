@@ -25,6 +25,7 @@ public class Sklep {
         return ilosc;
     }
     public static void wyswietl(){
+        System.out.println("Zawodnicy:");
         for (int i=0; i<ilosc; i++){
             System.out.println(i+1 + ". " + zawodnicydowyboru.get(i).toString());
         }
