@@ -8,10 +8,9 @@ public class MeczLiny extends Mecz implements Serializable {
         this.Sedzia = Sedzia;
         this.druzyna1 = druzyna1;
         this.druzyna2 = druzyna2;
-        Random x = new Random();
 
-        int luck1 = x.nextInt(80,101);
-        int luck2 = x.nextInt(80,101);
+        int luck1 = obliczSzczescie(druzyna1);
+        int luck2 = obliczSzczescie(druzyna2);
 
         int sumaS1 = obliczSumeSily(druzyna1);
         int sumaS2 = obliczSumeSily(druzyna2);
@@ -41,13 +40,12 @@ public class MeczLiny extends Mecz implements Serializable {
         }
         return suma;
     }
-    private int obliczSzczescie(){
+    private int obliczSzczescie(Druzyna druzyna){
         Random x = new Random();
 
-        int luck1 = x.nextInt(80,101);
-        int luck2 = x.nextInt(80,101);
+        int luck = x.nextInt(80,101);
 
-        return
+        return luck;
     }
 
 
