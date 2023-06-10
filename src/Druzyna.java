@@ -72,4 +72,14 @@ public class Druzyna implements Serializable {
         }
         else System.out.println("Za mało pieniędzy na koncie!");
     }
+    public void wyswietlZawodnikow(){
+        for (int i=0; i<iloscZawodnikow; i++){
+            Zawodnicy.get(i).toString();
+        }
+    }
+    public void wyswietlReprezentacje(){
+        for (int i=0; i<iloscRep; i++){
+            reprezentacja.get(i).toString();
+        }
+    }
 }
