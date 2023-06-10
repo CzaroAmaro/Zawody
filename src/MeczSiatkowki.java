@@ -8,6 +8,7 @@ public class MeczSiatkowki extends Mecz implements Serializable {
     public MeczSiatkowki(Sedzia Sedzia, Sedziapom Sedziapom1, Sedziapom Sedziapom2, Druzyna druzyna1, Druzyna druzyna2){
         this.Sedzia = Sedzia;
         this.Sedziapom = Sedziapom1;
+        this.Sedziapom = Sedziapom2;
         this.druzyna1 = druzyna1;
         this.druzyna2 = druzyna2;
 
