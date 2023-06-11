@@ -1,4 +1,6 @@
-public class Energetyk extends Przedmiot{
+import src.Przedmiot;
+
+public class Energetyk extends Przedmiot {
     public Energetyk(){
         super(20);
     }

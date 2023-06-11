@@ -1,4 +1,6 @@
-public class Izotonik extends Przedmiot{
+import src.Przedmiot;
+
+public class Izotonik extends Przedmiot {
     public Izotonik(){
         super(40);
     }

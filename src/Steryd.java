@@ -1,4 +1,6 @@
-public class Steryd extends Przedmiot{
+import src.Przedmiot;
+
+public class Steryd extends Przedmiot {
     public Steryd(){
         super(40);
     }

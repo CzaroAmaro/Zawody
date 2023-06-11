@@ -4,7 +4,7 @@ import java.util.Random;
 import java.io.Serializable;
 
 public class MeczLiny extends Mecz implements Serializable {
-    public MeczLiny(Sedzia Sedzia, Druzyna druzyna1, Druzyna druzyna2){
+    public int MeczLiny(Sedzia Sedzia, Druzyna druzyna1, Druzyna druzyna2){
         this.Sedzia = Sedzia;
         this.druzyna1 = druzyna1;
         this.druzyna2 = druzyna2;
@@ -24,6 +24,13 @@ public class MeczLiny extends Mecz implements Serializable {
         for (int j = 0; j < 6; j++){
             druzyna2.getRep(j).zagral();
         }
+        int suma1 = luck1 + sumaS1 + sumaM1;
+        int suma2 = luck2 + sumaS2 + sumaM2;
+
+        if(suma1 > suma2)
+            return 1;
+        else
+            return 2;
     }
     private int obliczSumeSily(Druzyna druzyna){
         int suma = 0;
