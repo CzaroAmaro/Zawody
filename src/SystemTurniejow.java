@@ -8,9 +8,10 @@ import java.io.PrintWriter;
 import java.util.stream.Collectors;
 
 
-public class SystemTurniejow extends Turniej{
+public class SystemTurniejow{
     public List<Sedzia> listaSedziow;
     public List<Turniej> listaTurniejow;
+
 
     public SystemTurniejow(){
         listaSedziow = new ArrayList<>();

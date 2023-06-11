@@ -12,6 +12,9 @@ public abstract class Turniej {
     public Mecz MeczFinalowy;
     public Mecz Mecz3Miejsce;
 
+    public Turniej(){
+
+    }
     public Turniej(String nazwa, List<Sedzia> listaSedziow ){
         nazwaTurnieju = nazwa;
         ListaSedziow = listaSedziow;

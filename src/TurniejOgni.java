@@ -1,4 +1,5 @@
 package src;
 
-public class TurniejOgni {
+public class TurniejOgni extends Turniej{
+
 }
