@@ -19,7 +19,7 @@ public class BazaNazwDruzyn {
             case 8:
                 return "Wuefiści team";
             case 9:
-                return "Paśnik team";
+                return "Pasieka team";
             case 10:
                 return "Zdana sesja";
             case 11:
