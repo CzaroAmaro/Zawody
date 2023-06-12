@@ -4,11 +4,13 @@ import java.io.Serializable;
 import java.util.Random;
 
 public class MeczOgni extends Mecz implements Serializable {
-    public int MeczOgni(Sedzia Sedzia, Druzyna druzyna1, Druzyna druzyna2){
-        this.Sedzia = Sedzia;
+    public MeczOgni(Sedzia sedzia, Druzyna druzyna1, Druzyna druzyna2) {
+        this.Sedzia = sedzia;
         this.druzyna1 = druzyna1;
         this.druzyna2 = druzyna2;
+    }
 
+    public int rozegrajMecz() {
         int luck1 = obliczSzczescie(druzyna1);
         int luck2 = obliczSzczescie(druzyna2);
 
@@ -21,7 +23,7 @@ public class MeczOgni extends Mecz implements Serializable {
         int suma1 = luck1 + sumaC1 + sumaR1;
         int suma2 = luck2 + sumaC2 + sumaR2;
 
-        if(suma1 > suma2)
+        if (suma1 > suma2)
             return 1;
         else
             return 2;

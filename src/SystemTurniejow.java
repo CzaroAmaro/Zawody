@@ -18,7 +18,7 @@ public class SystemTurniejow{
         listaTurniejow = new ArrayList<>();
     }
 
-    public void zapisDoPliku(String sciezkaSedziowie, String sciezkaTurniejeLiny, String sciezkaTurniejeOgni, String sciezkaTurniejeSiatkowki, String sciezkaMeczeLiny, String sciezkaMeczeOgnia, String sciezkaMeczeSiatkowki, String sciezkaDruzyn) {
+    public void ZapisDoPliku(String sciezkaSedziowie, String sciezkaTurniejeLiny, String sciezkaTurniejeOgni, String sciezkaTurniejeSiatkowki, String sciezkaMeczeLiny, String sciezkaMeczeOgnia, String sciezkaMeczeSiatkowki, String sciezkaDruzyn) {
         try (PrintWriter writerSedziowie = new PrintWriter(new FileWriter(sciezkaSedziowie));
              PrintWriter writerTurniejeLiny = new PrintWriter(new FileWriter(sciezkaTurniejeLiny));
              PrintWriter writerTurniejeOgni = new PrintWriter(new FileWriter(sciezkaTurniejeOgni));

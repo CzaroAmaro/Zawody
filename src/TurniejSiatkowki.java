@@ -1,4 +1,4 @@
 package src;
 
-public class TurniejSiatkowki {
+public class TurniejSiatkowki extends Turniej{
 }

@@ -1,4 +1,6 @@
-public class Wzrostanol extends Przedmiot{
+import src.Przedmiot;
+
+public class Wzrostanol extends Przedmiot {
     public Wzrostanol(){
         super(20);
     }
