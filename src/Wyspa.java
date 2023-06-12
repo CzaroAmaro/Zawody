@@ -57,6 +57,7 @@ public class Wyspa {
                 nowa.dodajZawodnika(a);
                 nowa.dodajDoRep(j);
             }
+            iloscDruzyn ++;
         }
     }
 }
