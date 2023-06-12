@@ -1,9 +1,26 @@
 package src;
 
+import java.util.Random;
 import java.util.ArrayList;
 public class Sklep {
-    private static ArrayList<Zawodnik> zawodnicydowyboru = new ArrayList<Zawodnik>();
+    private static final ArrayList<Zawodnik> zawodnicydowyboru = new ArrayList<Zawodnik>();
     private static int ilosc = 0;
+    public Sklep(){
+        Random x = new Random();
+        int sila, refleks, celnosc, szybkosc, waga, losujImie, wzrost;
+        for (int i=0; i<40; i++){
+            sila = x.nextInt(50, 101);
+            refleks = x.nextInt(50, 101);
+            szybkosc = x.nextInt(50, 101);
+            celnosc = x.nextInt(50, 101);
+            losujImie = x.nextInt(0, 21);
+            wzrost = x.nextInt(150, 250);
+            waga = x.nextInt(50, 121);
+            String imie = BazaImion.wybierz(losujImie);
+            Zawodnik a = new Zawodnik(imie, sila, refleks, szybkosc, celnosc, wzrost, waga);
+            zawodnicydowyboru.add(a);
+        }
+    }
     public static void dodajZawodnika(Zawodnik a){
         zawodnicydowyboru.add(a);
         ilosc += 1;
