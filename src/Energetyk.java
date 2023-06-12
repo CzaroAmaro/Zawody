@@ -6,7 +6,6 @@ public class Energetyk extends Przedmiot {
     }
     public void opis(){
         System.out.println("Zmniejsza zmęczenie danego zawodnika o 20");
-        System.out.println("Czas działania: permanentne");
     }
     public String toString(){
         return "Energetyk";
