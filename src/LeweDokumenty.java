@@ -8,7 +8,6 @@ public class LeweDokumenty extends Przedmiot {
     }
     public void opis(){
         System.out.println("Pozwala na zmianę imienia danego zawodnika");
-        System.out.println("Czas działania: permanentne");
     }
     public void uzyj(Zawodnik a){
         Scanner x = new Scanner(System.in);
