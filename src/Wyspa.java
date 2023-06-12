@@ -55,6 +55,7 @@ public class Wyspa {
                 waga = x.nextInt(50, 121);
                 Zawodnik a = new Zawodnik(imie, sila, refleks, szybkosc, celnosc, wzrost, waga);
                 nowa.dodajZawodnika(a);
+                nowa.dodajDoRep(j);
             }
         }
     }
