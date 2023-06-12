@@ -6,7 +6,6 @@ public class Wzrostanol extends Przedmiot {
     }
     public void opis(){
         System.out.println("Zwiększa wzrost danego zawodnika o 20cm");
-        System.out.println("Czas działania: permamentne");
     }
     public String toString(){
         return "Wzrostanol";
