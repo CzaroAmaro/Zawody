@@ -52,6 +52,27 @@ public class Zawodnik {
     public void przeczekal(){
         zmeczenie -= 20;
     }
+    public void addSila(int a){
+        sila += a;
+    }
+    public void addRefleks(int a){
+        refleks += a;
+    }
+    public void addSzybkosc(int a){
+        szybkosc += a;
+    }
+    public void addCelnosc(int a){
+        celnosc += a;
+    }
+    public void addWzrost(int a){
+        wzrost += a;
+    }
+    public void addWaga(int a){
+        waga += a;
+    }
+    public void zmienImie(String a){
+        imie = a;
+    }
     public String getImie(){
         return imie;
     }
