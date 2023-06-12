@@ -1,3 +1,6 @@
+package src;
+import src.Przedmiot;
+
 public class LeweDokumenty extends Przedmiot {
     public LeweDokumenty(){
         super(50);

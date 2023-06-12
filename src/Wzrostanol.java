@@ -1,4 +1,4 @@
-import src.Przedmiot;
+package src;
 
 public class Wzrostanol extends Przedmiot {
     public Wzrostanol(){

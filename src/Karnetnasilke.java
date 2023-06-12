@@ -1,4 +1,8 @@
-public class Karnetnasilke extends Przedmiot{
+package src;
+import src.Przedmiot;
+
+
+public class Karnetnasilke extends Przedmiot {
     public Karnetnasilke(){
         super(120);
     }

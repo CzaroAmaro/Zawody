@@ -75,7 +75,7 @@ public class ZarzadzanieDruzyna {
                 System.out.println("Na którym zawodniku chcesz użyć przedmiotu?");
                 int b = x.nextInt();
                 System.out.println("Jakiego przedmiotu chcesz użyć?");
-                druzyna.wyswietlPrzedmioty();
+               // druzyna.wyswietlPrzedmioty();
                 int c = x.nextInt();
             }
         }while(a!=0);
