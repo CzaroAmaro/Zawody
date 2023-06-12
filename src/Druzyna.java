@@ -82,4 +82,7 @@ public class Druzyna implements Serializable {
             reprezentacja.get(i).toString();
         }
     }
+    public int getPunkty(){
+        return punkty;
+    }
 }
