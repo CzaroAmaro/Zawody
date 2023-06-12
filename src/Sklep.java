@@ -7,16 +7,16 @@ public class Sklep {
     private static int ilosc = 0;
     public Sklep(){
         Random x = new Random();
+        String imie;
         int sila, refleks, celnosc, szybkosc, waga, losujImie, wzrost;
         for (int i=0; i<40; i++){
             sila = x.nextInt(50, 101);
             refleks = x.nextInt(50, 101);
             szybkosc = x.nextInt(50, 101);
             celnosc = x.nextInt(50, 101);
-            losujImie = x.nextInt(0, 21);
             wzrost = x.nextInt(150, 250);
             waga = x.nextInt(50, 121);
-            String imie = BazaImion.wybierz(losujImie);
+            imie = BazaImion.wybierz(x.nextInt(0, 21));
             Zawodnik a = new Zawodnik(imie, sila, refleks, szybkosc, celnosc, wzrost, waga);
             zawodnicydowyboru.add(a);
         }
