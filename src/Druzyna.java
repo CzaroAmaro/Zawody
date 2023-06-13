@@ -63,6 +63,9 @@ public class Druzyna implements Serializable {
     public Zawodnik getRep(int a){
         return reprezentacja.get(a);
     }
+    public Przedmiot getPrzedmiot(int a){
+        return przedmioty.get(a);
+    }
     public void wplac(int a){
         saldo += a;
     }
