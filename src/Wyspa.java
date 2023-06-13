@@ -21,7 +21,7 @@ public class Wyspa {
             listaDruzyn.get(i).toString();
         }
     }
-    public void StworzWlasnaDruzyne(){
+    public void stworzWlasnaDruzyne(){
         Scanner x = new Scanner(System.in);
         System.out.println("Podaj nazwę swojej drużyny:");
         String nazwa = x.next();
