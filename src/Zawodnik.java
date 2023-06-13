@@ -8,7 +8,6 @@ public class Zawodnik {
     private int celnosc = 50;
     private int wzrost = 50;
     private int waga = 50;
-    private int zmeczenie = 0;
     private int jakosc = 2;
     private int cena = 150;
     public Zawodnik(String imie, int sila, int refleks, int szybkosc, int celnosc, int wzrost, int waga) {
@@ -58,12 +57,6 @@ public class Zawodnik {
             cena = 200;
         }
     }
-    public void zagral(){
-        zmeczenie += 20;
-    }
-    public void przeczekal(){
-        zmeczenie -= 20;
-    }
     public void addSila(int a){
         sila += a;
     }
@@ -106,9 +99,6 @@ public class Zawodnik {
     public int getWaga(){
         return waga;
     }
-    public int getZmeczenie(){
-        return zmeczenie;
-    }
     public void showStaty(){
         System.out.println("Zawodnik: " + imie);
         System.out.println("Siła: " + sila + "/100");
@@ -142,3 +132,4 @@ public class Zawodnik {
         return cena;
     }
 }
+
