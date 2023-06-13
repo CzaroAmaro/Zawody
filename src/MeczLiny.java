@@ -56,7 +56,6 @@ public class MeczLiny extends Mecz implements Serializable {
     }
 
 
-
     @Override
     public String toString(){
         return super.toString() + druzyna1.nazwaDruzyny + "vs" + druzyna2.nazwaDruzyny
