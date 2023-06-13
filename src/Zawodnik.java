@@ -1,6 +1,5 @@
 package src;
 
-
 public class Zawodnik {
     private String imie = "Dżon";
     private int sila = 50;
@@ -11,6 +10,7 @@ public class Zawodnik {
     private int waga = 50;
     private int zmeczenie = 0;
     private int jakosc = 2;
+    private int cena = 150;
     public Zawodnik(String imie, int sila, int refleks, int szybkosc, int celnosc, int wzrost, int waga) {
         if (czyParametryPoprawne(sila, refleks, szybkosc, celnosc, wzrost, waga)) {
             this.imie = imie;
@@ -22,7 +22,6 @@ public class Zawodnik {
             this.waga = waga;
             obliczJakosc();
         }
-        else System.out.println("error"); //nie powinno sie wydarzyc
     }
 
     public boolean czyParametryPoprawne(int sila, int refleks, int szybkosc, int celnosc, int wzrost, int waga) {
@@ -34,17 +33,30 @@ public class Zawodnik {
                 waga > 50 && waga < 120;
         return poprawne;
     }
-
+    public void piwo(){
+    }
     public void obliczJakosc() {
         int suma = sila + refleks + szybkosc + celnosc;
-        if (suma >= 0 && suma < 200)
+        if (suma >= 0 && suma < 200) {
             jakosc = 1;
-        else if (suma >= 200 && suma < 300)
+            cena = 50;
+        }
+        if (suma >= 200 && suma < 250){
             jakosc = 2;
-
-        else
+            cena = 100;
+        }
+        if (suma >= 250 && suma < 300){
             jakosc = 3;
-
+            cena = 120;
+        }
+        if (suma >= 300 && suma < 350){
+            jakosc = 4;
+            cena = 150;
+        }
+        if (suma >= 350 && suma <=400){
+            jakosc = 5;
+            cena = 200;
+        }
     }
     public void zagral(){
         zmeczenie += 20;
@@ -118,6 +130,15 @@ public class Zawodnik {
         if (jakosc == 3){
             return imie + " ***";
         }
+        if (jakosc == 4){
+            return imie + " ****";
+        }
+        if (jakosc == 5){
+            return imie + " *****";
+        }
         return imie;
+    }
+    public int getCena(){
+        return cena;
     }
 }
