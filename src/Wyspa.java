@@ -3,6 +3,7 @@ package src;
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
+
 public class Wyspa {
     private static ArrayList<Druzyna> listaDruzyn = new ArrayList<>();
     private int iloscDruzyn = 0;
@@ -30,12 +31,20 @@ public class Wyspa {
         Sklep sklep = new Sklep();
         int a;
         for(int i=1; i<=12; i++){
-            System.out.println("Wybierz zawodników do drużyny (Wybrano " + i + "/12):");
-            sklep.wyswietl();
-            System.out.println("Twoje saldo: " + nasza.getSaldo());
-            a = x.nextInt()-1;
-            nasza.dodajZawodnika(sklep.getZawodnik(a));
-            sklep.kupiony(a);
+            if(nasza.getSaldo()>=50) {
+                System.out.println("Aktualni zawodnicy:");
+                nasza.wyswietlZawodnikow();
+                System.out.println("Wybierz zawodników do drużyny (Wybrano " + (i - 1) + "/12):");
+                sklep.wyswietl();
+                System.out.println("Twoje saldo: " + nasza.getSaldo());
+                a = x.nextInt() - 1;
+                nasza.dodajZawodnika(sklep.getZawodnik(a));
+                nasza.wyplac(sklep.getZawodnik(a).getCena());
+                sklep.kupiony(a);
+            }
+            else {
+                System.out.println("Brak pieniędzy, dobieranie zawodników zakończone");
+            }
         }
         String imie1, nazwa1;
         Random xx = new Random();
