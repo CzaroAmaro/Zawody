@@ -1,8 +1,8 @@
 package src;
-
 import java.util.Scanner;
+
 public class ZarzadzanieDruzyna {
-    public void zarzadzanie(Druzyna druzyna){
+    public ZarzadzanieDruzyna(Druzyna druzyna){
         int a=0;
         Scanner x = new Scanner(System.in);
         do{
@@ -84,7 +84,6 @@ public class ZarzadzanieDruzyna {
     public void kupPrzedmioty(Druzyna druzyna){
         Scanner x = new Scanner(System.in);
         Piwo piwo = new Piwo();
-        Energetyk energetyk = new Energetyk();
         Izotonik izotonik = new Izotonik();
         Karnetnasilke karnet = new Karnetnasilke();
         Wzrostanol wzrostanol = new Wzrostanol();
@@ -98,8 +97,6 @@ public class ZarzadzanieDruzyna {
             System.out.println("Lista pzredmiotów do kupienia:");
             System.out.println("1. Piwo cena: " + piwo.getCena());
             piwo.opis();
-            System.out.println("2. Energetyk cena: " + energetyk.getCena());
-            energetyk.opis();
             System.out.println("3. Napój izotoniczny cena: " + izotonik.getCena());
             izotonik.opis();
             System.out.println("4. Karnet na siłownie cena: " + karnet.getCena());
@@ -116,26 +113,22 @@ public class ZarzadzanieDruzyna {
                 druzyna.wyplac(piwo.getCena());
             }
             if (d == 2){
-                druzyna.dodajPrzedmiot(energetyk);
-                druzyna.wyplac(energetyk.getCena());
-            }
-            if (d == 3){
                 druzyna.dodajPrzedmiot(izotonik);
                 druzyna.wyplac(izotonik.getCena());
             }
-            if (d == 4){
+            if (d == 3){
                 druzyna.dodajPrzedmiot(karnet);
                 druzyna.wyplac(karnet.getCena());
             }
-            if (d == 5){
+            if (d == 4){
                 druzyna.dodajPrzedmiot(wzrostanol);
                 druzyna.wyplac(wzrostanol.getCena());
             }
-            if (d == 6){
+            if (d == 5){
                 druzyna.dodajPrzedmiot(steryd);
                 druzyna.wyplac(steryd.getCena());
             }
-            if (d == 7){
+            if (d == 6){
                 druzyna.dodajPrzedmiot(leweDokumenty);
                 druzyna.wyplac(leweDokumenty.getCena());
             }
