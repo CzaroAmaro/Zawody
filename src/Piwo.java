@@ -1,7 +1,7 @@
 package src;
 public class Piwo extends Przedmiot{
-    public Piwo(int cena){
-        super(cena);
+    public Piwo(){
+        super(50);
     }
     public void opis(){
         System.out.println("Zwiększa siłę o 20, ale zmniejsza celność o 20");
