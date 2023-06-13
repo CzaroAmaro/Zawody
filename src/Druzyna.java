@@ -37,7 +37,7 @@ public class Druzyna implements Serializable {
         punkty += a;
     }
     public void dodajZawodnika(Zawodnik a){
-        if (iloscZawodnikow < 10){
+        if (iloscZawodnikow <= 12){
             Zawodnicy.add(a);
             iloscZawodnikow += 1;
             System.out.println("Dodawno zawodnika pomyślnie\n");
