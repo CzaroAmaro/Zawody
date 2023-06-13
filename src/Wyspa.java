@@ -21,7 +21,7 @@ public class Wyspa {
             listaDruzyn.get(i).toString();
         }
     }
-    public void stworzWlasnaDruzyne(){
+    public Wyspa(){
         Scanner x = new Scanner(System.in);
         System.out.println("Podaj nazwę swojej drużyny:");
         String nazwa = x.next();
@@ -37,24 +37,22 @@ public class Wyspa {
             nasza.dodajZawodnika(sklep.getZawodnik(a));
             sklep.kupiony(a);
         }
-    }
-    public void losowanieDruzyn(){
-        String imie, nazwa;
-        Random x = new Random();
+        String imie1, nazwa1;
+        Random xx = new Random();
         int sila, refleks, szybkosc, celnosc, wzrost, waga;
         for(int i=1; i<8; i++){
-            nazwa = BazaNazwDruzyn. wybierz(x.nextInt(1, 21));
-            Druzyna nowa = new Druzyna(nazwa);
+            nazwa1 = BazaNazwDruzyn. wybierz(xx.nextInt(1, 21));
+            Druzyna nowa = new Druzyna(nazwa1);
             for (int j=0; j<6; j++){
-                sila = x.nextInt(50, 101);
-                refleks = x.nextInt(50, 101);
-                szybkosc = x.nextInt(50, 101);
-                celnosc = x.nextInt(50, 101);
-                imie = BazaImion.wybierz(x.nextInt(0, 21));
-                wzrost = x.nextInt(150, 250);
-                waga = x.nextInt(50, 121);
-                Zawodnik a = new Zawodnik(imie, sila, refleks, szybkosc, celnosc, wzrost, waga);
-                nowa.dodajZawodnika(a);
+                sila = xx.nextInt(50, 101);
+                refleks = xx.nextInt(50, 101);
+                szybkosc = xx.nextInt(50, 101);
+                celnosc = xx.nextInt(50, 101);
+                imie1 = BazaImion.wybierz(xx.nextInt(0, 21));
+                wzrost = xx.nextInt(150, 250);
+                waga = xx.nextInt(50, 121);
+                Zawodnik aa = new Zawodnik(imie1, sila, refleks, szybkosc, celnosc, wzrost, waga);
+                nowa.dodajZawodnika(aa);
                 nowa.dodajDoRep(j);
             }
             iloscDruzyn ++;
