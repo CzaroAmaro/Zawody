@@ -18,7 +18,7 @@ public class Sklep {
             waga = x.nextInt(50, 121);
             imie = BazaImion.wybierz(x.nextInt(0, 21));
             Zawodnik a = new Zawodnik(imie, sila, refleks, szybkosc, celnosc, wzrost, waga);
-            zawodnicydowyboru.add(a);
+            dodajZawodnika(a);
         }
     }
     public static void dodajZawodnika(Zawodnik a){
@@ -44,7 +44,7 @@ public class Sklep {
     public static void wyswietl(){
         System.out.println("Zawodnicy:");
         for (int i=0; i<ilosc; i++){
-            System.out.println(i+1 + ". " + zawodnicydowyboru.get(i).toString());
+            System.out.println(i+1 + ". " + zawodnicydowyboru.get(i).toString() + " cena: " + zawodnicydowyboru.get(i).getCena());
         }
     }
 }
