@@ -1,6 +1,7 @@
 package src;
 import java.io.Serializable;
 import java.util.ArrayList;
+
 public class Druzyna implements Serializable {
     public ArrayList<Zawodnik> Zawodnicy;
     private static ArrayList<Zawodnik> reprezentacja = new ArrayList<Zawodnik>();
@@ -38,11 +39,8 @@ public class Druzyna implements Serializable {
         punkty += a;
     }
     public void dodajZawodnika(Zawodnik a){
-        if (iloscZawodnikow <= 12){
-            Zawodnicy.add(a);
-            iloscZawodnikow += 1;
-        }
-        else System.out.println("Drużyna ma maksymalną ilość zawodników");
+        Zawodnicy.add(a);
+        iloscZawodnikow += 1;
     }
     void dodajDoRep(int a){
         if (a<6){
