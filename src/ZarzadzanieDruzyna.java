@@ -58,7 +58,7 @@ public class ZarzadzanieDruzyna {
             if (c==1){
                 System.out.println("Który zawodnik?");
                 int b = x.nextInt();
-                druzyna.getZawodnik(b-1).showStaty();
+                druzyna.getRep(b-1).showStaty();
             }
             if (c==2){
                 System.out.println("Którego zawodnika chcesz dodać?");
@@ -73,12 +73,12 @@ public class ZarzadzanieDruzyna {
             }
             if (c==4){
                 System.out.println("Na którym zawodniku chcesz użyć przedmiotu?");
-                int bb = x.nextInt()-1;
+                int bb = x.nextInt();
                 System.out.println("Jakiego przedmiotu chcesz użyć?");
                 druzyna.wyswietlPrzedmioty();
-                int cc = x.nextInt()-1;
-                if (bb >= druzyna.getIloscRep() || cc >= druzyna.getIloscPrzedmiotow()) {
-                    druzyna.getPrzedmiot(cc).uzyj(druzyna.getRep(bb));
+                int cc = x.nextInt();
+                if (bb <= druzyna.getIloscRep() && cc <= druzyna.getIloscPrzedmiotow() && bb >= 0 && cc >= 0) {
+                    druzyna.getPrzedmiot(cc-1).uzyj(druzyna.getRep(bb-1));
                 }
                 else System.out.println("Błąd");
             }
@@ -103,19 +103,19 @@ public class ZarzadzanieDruzyna {
             System.out.println("1. Piwo cena: " + piwo.getCena());
             piwo.opis();
             System.out.println();
-            System.out.println("3. Napój izotoniczny cena: " + izotonik.getCena());
+            System.out.println("2. Napój izotoniczny cena: " + izotonik.getCena());
             izotonik.opis();
             System.out.println();
-            System.out.println("4. Karnet na siłownie cena: " + karnet.getCena());
+            System.out.println("3. Karnet na siłownie cena: " + karnet.getCena());
             karnet.opis();
             System.out.println();
-            System.out.println("5. Wzrostanol cena: " + wzrostanol.getCena());
+            System.out.println("4. Wzrostanol cena: " + wzrostanol.getCena());
             wzrostanol.opis();
             System.out.println();
-            System.out.println("6. Steryd cena: " + steryd.getCena());
+            System.out.println("5. Steryd cena: " + steryd.getCena());
             steryd.opis();
             System.out.println();
-            System.out.println("7. Lewe dokumenty cena: " + leweDokumenty.getCena());
+            System.out.println("6. Lewe dokumenty cena: " + leweDokumenty.getCena());
             leweDokumenty.opis();
             System.out.println();
             System.out.println("0. Wyjdź");
