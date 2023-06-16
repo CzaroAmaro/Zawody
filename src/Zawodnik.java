@@ -108,6 +108,7 @@ public class Zawodnik {
         System.out.println("Wzrost: " + wzrost + "cm");
         System.out.println("Waga: " + waga + "kg");
         System.out.println("Rating: " + jakosc + "/3");
+        System.out.println();
     }
 
     public String toString (){
