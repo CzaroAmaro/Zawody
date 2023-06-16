@@ -74,7 +74,7 @@ public class Druzyna implements Serializable {
     }
     public void wyswietlZawodnikow(){
         for (int i=0; i<iloscZawodnikow; i++){
-            Zawodnicy.get(i).toString();
+            System.out.println(i+1 + ". " + Zawodnicy.get(i).toString());
         }
     }
     public void wyswietlReprezentacje(){
