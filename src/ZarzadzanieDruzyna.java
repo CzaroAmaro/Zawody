@@ -122,28 +122,46 @@ public class ZarzadzanieDruzyna {
             System.out.println("0. Wyjdź");
             d = x.nextInt();
             if (d == 1){
-                druzyna.dodajPrzedmiot(piwo);
-                druzyna.wyplac(piwo.getCena());
+                if(druzyna.getSaldo() >= piwo.getCena()) {
+                    druzyna.dodajPrzedmiot(piwo);
+                    druzyna.wyplac(piwo.getCena());
+                }
+                else System.out.println("Za mało pieniędzy!");
             }
             if (d == 2){
-                druzyna.dodajPrzedmiot(izotonik);
-                druzyna.wyplac(izotonik.getCena());
+                if(druzyna.getSaldo() >= izotonik.getCena()) {
+                    druzyna.dodajPrzedmiot(izotonik);
+                    druzyna.wyplac(izotonik.getCena());
+                }
+                else System.out.println("Za mało pieniędzy!");
             }
             if (d == 3){
-                druzyna.dodajPrzedmiot(karnet);
-                druzyna.wyplac(karnet.getCena());
+                if(druzyna.getSaldo() >= karnet.getCena()) {
+                    druzyna.dodajPrzedmiot(karnet);
+                    druzyna.wyplac(karnet.getCena());
+                }
+                else System.out.println("Za mało pieniędzy!");
             }
             if (d == 4){
-                druzyna.dodajPrzedmiot(wzrostanol);
-                druzyna.wyplac(wzrostanol.getCena());
+                if(druzyna.getSaldo() >= wzrostanol.getCena()) {
+                    druzyna.dodajPrzedmiot(wzrostanol);
+                    druzyna.wyplac(wzrostanol.getCena());
+                }
+                else System.out.println("Za mało pieniędzy!");
             }
             if (d == 5){
-                druzyna.dodajPrzedmiot(steryd);
-                druzyna.wyplac(steryd.getCena());
+                if(druzyna.getSaldo() >= steryd.getCena()) {
+                    druzyna.dodajPrzedmiot(steryd);
+                    druzyna.wyplac(steryd.getCena());
+                }
+                else System.out.println("Za mało pieniędzy!");
             }
             if (d == 6){
-                druzyna.dodajPrzedmiot(leweDokumenty);
-                druzyna.wyplac(leweDokumenty.getCena());
+                if(druzyna.getSaldo() >= leweDokumenty.getCena()) {
+                    druzyna.dodajPrzedmiot(leweDokumenty);
+                    druzyna.wyplac(leweDokumenty.getCena());
+                }
+                else System.out.println("Za mało pieniędzy!");
             }
         }while(d!=0);
     }
