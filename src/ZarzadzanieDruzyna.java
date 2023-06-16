@@ -95,8 +95,10 @@ public class ZarzadzanieDruzyna {
         int d=0;
         do {
             System.out.println("Saldo: " + druzyna.getSaldo());
+            System.out.println();
             System.out.println("Twoje przedmioty:");
             druzyna.wyswietlPrzedmioty();
+            System.out.println();
             System.out.println("Lista pzredmiotów do kupienia:");
             System.out.println("1. Piwo cena: " + piwo.getCena());
             piwo.opis();
