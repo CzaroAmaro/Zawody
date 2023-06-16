@@ -4,8 +4,8 @@ import java.util.ArrayList;
 
 public class Druzyna implements Serializable {
     public ArrayList<Zawodnik> Zawodnicy;
-    private static ArrayList<Zawodnik> reprezentacja = new ArrayList<Zawodnik>();
-    private static ArrayList<Przedmiot> przedmioty = new ArrayList<Przedmiot>();
+    private ArrayList<Zawodnik> reprezentacja = new ArrayList<Zawodnik>();
+    private ArrayList<Przedmiot> przedmioty = new ArrayList<Przedmiot>();
     private int iloscZawodnikow = 0;
     private int iloscRep = 0;
     private int iloscPrzedmiotow = 0;
