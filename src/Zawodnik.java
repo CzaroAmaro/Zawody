@@ -107,7 +107,7 @@ public class Zawodnik {
         System.out.println("Celność rzutu/strzału: " + celnosc + "/100");
         System.out.println("Wzrost: " + wzrost + "cm");
         System.out.println("Waga: " + waga + "kg");
-        System.out.println("Rating: " + jakosc + "/3");
+        System.out.println("Rating: " + jakosc + "/5");
         System.out.println();
     }
 
