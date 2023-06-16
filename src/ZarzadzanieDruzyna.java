@@ -97,17 +97,24 @@ public class ZarzadzanieDruzyna {
             System.out.println("Lista pzredmiotów do kupienia:");
             System.out.println("1. Piwo cena: " + piwo.getCena());
             piwo.opis();
+            System.out.println();
             System.out.println("3. Napój izotoniczny cena: " + izotonik.getCena());
             izotonik.opis();
+            System.out.println();
             System.out.println("4. Karnet na siłownie cena: " + karnet.getCena());
             karnet.opis();
+            System.out.println();
             System.out.println("5. Wzrostanol cena: " + wzrostanol.getCena());
             wzrostanol.opis();
+            System.out.println();
             System.out.println("6. Steryd cena: " + steryd.getCena());
             steryd.opis();
+            System.out.println();
             System.out.println("7. Lewe dokumenty cena: " + leweDokumenty.getCena());
             leweDokumenty.opis();
+            System.out.println();
             System.out.println("0. Wyjdź");
+            d = x.nextInt();
             if (d == 1){
                 druzyna.dodajPrzedmiot(piwo);
                 druzyna.wyplac(piwo.getCena());
