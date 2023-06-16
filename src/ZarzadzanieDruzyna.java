@@ -58,7 +58,7 @@ public class ZarzadzanieDruzyna {
             if (c==1){
                 System.out.println("Który zawodnik?");
                 int b = x.nextInt();
-                druzyna.getZawodnik(b-1).showStaty();
+                druzyna.getRep(b-1).showStaty();
             }
             if (c==2){
                 System.out.println("Którego zawodnika chcesz dodać?");
