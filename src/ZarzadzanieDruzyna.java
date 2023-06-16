@@ -73,12 +73,12 @@ public class ZarzadzanieDruzyna {
             }
             if (c==4){
                 System.out.println("Na którym zawodniku chcesz użyć przedmiotu?");
-                int bb = x.nextInt()-1;
+                int bb = x.nextInt();
                 System.out.println("Jakiego przedmiotu chcesz użyć?");
                 druzyna.wyswietlPrzedmioty();
-                int cc = x.nextInt()-1;
-                if (bb > druzyna.getIloscRep() || cc > druzyna.getIloscPrzedmiotow()) {
-                    druzyna.getPrzedmiot(cc).uzyj(druzyna.getRep(bb));
+                int cc = x.nextInt();
+                if (bb <= druzyna.getIloscRep() && cc <= druzyna.getIloscPrzedmiotow() && bb >= 0 && cc >= 0) {
+                    druzyna.getPrzedmiot(cc-1).uzyj(druzyna.getRep(bb-1));
                 }
                 else System.out.println("Błąd");
             }
