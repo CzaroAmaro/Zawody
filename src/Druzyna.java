@@ -86,7 +86,7 @@ public class Druzyna implements Serializable {
     }
     public void wyswietlPrzedmioty(){
         for (int i=0; i<iloscPrzedmiotow; i++){
-            przedmioty.get(i).toString();
+            System.out.println(i+1 + ". " + przedmioty.get(i).toString());
         }
     }
     public Przedmiot getPrzedmiot(int a){
