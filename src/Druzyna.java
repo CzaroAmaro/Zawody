@@ -98,6 +98,15 @@ public class Druzyna implements Serializable {
     public int getSaldo(){
         return saldo;
     }
+    public int getIloscZawodnikow(){
+        return iloscZawodnikow;
+    }
+    public int getIloscRep(){
+        return iloscRep;
+    }
+    public int getIloscPrzedmiotow(){
+        return iloscPrzedmiotow;
+    }
     public String toString(){
         return "Druzyna: " + nazwaDruzyny + " ilość punktów: " + punkty;
     }
