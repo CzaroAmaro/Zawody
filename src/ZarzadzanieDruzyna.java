@@ -2,9 +2,9 @@ package src;
 import java.util.Scanner;
 
 public class ZarzadzanieDruzyna {
-    public ZarzadzanieDruzyna(Druzyna druzyna){
-        int a=0;
-        Scanner x = new Scanner(System.in);
+    public void interfejs(Druzyna druzyna){
+        int wybor;
+        Scanner scanner = new Scanner(System.in);
         do{
             System.out.println("Zarządzanie drużyną");
             System.out.println("Co chcesz zrobić?");
@@ -12,17 +12,17 @@ public class ZarzadzanieDruzyna {
             System.out.println("1. Wyświetl zawodników z drużyny");
             System.out.println("2. Edytuj reprezentację drużyny");
             System.out.println("3. Kup przedmioty ze sklepu");
-            a = x.nextInt();
-            if (a == 1){
+            wybor = scanner.nextInt();
+            if (wybor == 1){
                 zawodnicy(druzyna);
             }
-            if (a == 2){
+            if (wybor == 2){
                 reprezentacja(druzyna);
             }
-            if (a == 3){
+            if (wybor == 3){
                 kupPrzedmioty(druzyna);
             }
-        }while (a != 0);
+        }while (wybor != 0);
     }
     public void zawodnicy(Druzyna druzyna){
         int b=0;
@@ -77,7 +77,7 @@ public class ZarzadzanieDruzyna {
                 System.out.println("Jakiego przedmiotu chcesz użyć?");
                 druzyna.wyswietlPrzedmioty();
                 int cc = x.nextInt()-1;
-                druzyna.getPrzedmiot(cc).uzyj(druzyna.getRep(bb));
+                //druzyna.getPrzedmiot(cc).uzyj(druzyna.getRep(bb));
             }
         }while(c!=0);
     }
