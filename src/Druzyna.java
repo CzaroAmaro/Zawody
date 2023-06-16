@@ -59,6 +59,10 @@ public class Druzyna implements Serializable {
         przedmioty.add(a);
         iloscPrzedmiotow +=1;
     }
+    public void usunPrzedmiot(int a){
+        przedmioty.remove(a);
+        iloscPrzedmiotow--;
+    }
     public void usunZRep(int a){
         if (a<6 && a>-1){
             reprezentacja.remove(a);
