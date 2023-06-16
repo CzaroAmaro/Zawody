@@ -15,8 +15,8 @@ public class MeczLiny extends Mecz implements Serializable {
         int sumaM1 = obliczSumeMasy(druzyna1);
         int sumaM2 = obliczSumeMasy(druzyna2);
 
-        int suma1 = luck1 + sumaS1 + sumaM1 + Sedzia.getPrzychylnosc1();
-        int suma2 = luck2 + sumaS2 + sumaM2 + Sedzia.getPrzychylnosc2();
+        int suma1 = luck1 + sumaS1 + sumaM1;
+        int suma2 = luck2 + sumaS2 + sumaM2;
 
         if(suma1 > suma2)
             return 1;
