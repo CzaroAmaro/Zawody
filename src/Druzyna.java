@@ -43,9 +43,11 @@ public class Druzyna implements Serializable {
         iloscZawodnikow += 1;
     }
     void dodajDoRep(int a){
-        if (a<6){
-                reprezentacja.add(Zawodnicy.get(a));
+        if (iloscRep<6){
+            reprezentacja.add(Zawodnicy.get(a));
+            iloscRep ++;
         }
+        else System.out.println("Maksymalna ilość zawodników w reprezentacji");
     }
     void dodajPrzedmiot(Przedmiot a){
         przedmioty.add(a);
