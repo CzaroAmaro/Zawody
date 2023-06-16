@@ -5,7 +5,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Wyspa {
-    private static ArrayList<Druzyna> listaDruzyn = new ArrayList<>();
+    private static ArrayList<Druzyna> listaDruzyn = new ArrayList<Druzyna>();
     private int iloscDruzyn = 0;
     public void dodajDruzyne(Druzyna a){
         listaDruzyn.add(a);
@@ -19,7 +19,7 @@ public class Wyspa {
     }
     public void wyswietlDruzyny(){
         for (int i=0; i<iloscDruzyn; i++){
-            listaDruzyn.get(i).toString();
+            System.out.println(i+1 + ". " + listaDruzyn.get(i).toString());
         }
     }
     public Wyspa(){
@@ -52,6 +52,7 @@ public class Wyspa {
         for(int i=1; i<8; i++){
             nazwa1 = BazaNazwDruzyn. wybierz(xx.nextInt(1, 21));
             Druzyna nowa = new Druzyna(nazwa1);
+            dodajDruzyne(nowa);
             for (int j=0; j<6; j++){
                 sila = xx.nextInt(50, 101);
                 refleks = xx.nextInt(50, 101);
