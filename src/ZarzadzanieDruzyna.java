@@ -77,7 +77,7 @@ public class ZarzadzanieDruzyna {
                 System.out.println("Jakiego przedmiotu chcesz użyć?");
                 druzyna.wyswietlPrzedmioty();
                 int cc = x.nextInt()-1;
-                if (bb >= druzyna.getIloscRep() || cc >= druzyna.getIloscPrzedmiotow()) {
+                if (bb > druzyna.getIloscRep() || cc > druzyna.getIloscPrzedmiotow()) {
                     druzyna.getPrzedmiot(cc).uzyj(druzyna.getRep(bb));
                 }
                 else System.out.println("Błąd");
