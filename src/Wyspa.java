@@ -63,7 +63,7 @@ public class Wyspa {
                 waga = xx.nextInt(50, 121);
                 Zawodnik aa = new Zawodnik(imie1, sila, refleks, szybkosc, celnosc, wzrost, waga);
                 nowa.dodajZawodnika(aa);
-                nowa.dodajDoRep(j);
+                nowa.dodajDoRep(0);
             }
             iloscDruzyn ++;
         }
