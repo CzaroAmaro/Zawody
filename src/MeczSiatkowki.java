@@ -5,12 +5,7 @@ import java.util.Random;
 
 public class MeczSiatkowki extends Mecz implements Serializable {
 
-    public int MeczSiatkowki(Sedzia Sedzia, Sedziapom Sedziapom1, Sedziapom Sedziapom2, Druzyna druzyna1, Druzyna druzyna2){
-        this.Sedzia = Sedzia;
-        this.Sedziapom = Sedziapom1;
-        this.Sedziapom = Sedziapom2;
-        this.druzyna1 = druzyna1;
-        this.druzyna2 = druzyna2;
+    public int rozegrajMecz(Sedzia Sedzia, Sedziapom Sedziapom1, Sedziapom Sedziapom2, Druzyna druzyna1, Druzyna druzyna2){
 
         int luck1 = obliczSzczescie(druzyna1);
         int luck2 = obliczSzczescie(druzyna2);
@@ -48,7 +43,7 @@ public class MeczSiatkowki extends Mecz implements Serializable {
     private int obliczSzczescie(Druzyna druzyna){
         Random x = new Random();
 
-        int luck = x.nextInt(80,101);
+        int luck = x.nextInt(20)+80;
 
         return luck;
     }

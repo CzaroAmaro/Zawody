@@ -4,10 +4,7 @@ import java.util.Random;
 import java.io.Serializable;
 
 public class MeczLiny extends Mecz implements Serializable {
-    public int MeczLiny(Sedzia Sedzia, Druzyna druzyna1, Druzyna druzyna2){
-        this.Sedzia = Sedzia;
-        this.druzyna1 = druzyna1;
-        this.druzyna2 = druzyna2;
+    public int rozegrajMecz(Sedzia Sedzia, Druzyna druzyna1, Druzyna druzyna2){
 
         int luck1 = obliczSzczescie(druzyna1);
         int luck2 = obliczSzczescie(druzyna2);
@@ -44,7 +41,7 @@ public class MeczLiny extends Mecz implements Serializable {
     private int obliczSzczescie(Druzyna druzyna){
         Random x = new Random();
 
-        int luck = x.nextInt(80,101);
+        int luck = x.nextInt(20)+80;
 
         return luck;
     }

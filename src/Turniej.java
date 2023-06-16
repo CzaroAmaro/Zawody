@@ -75,7 +75,7 @@ public abstract class Turniej {
 
     public void RozegrajMeczLiny(Sedzia sedzia, Druzyna druzyna1, Druzyna druzyna2, HashMap<Druzyna, Integer> listaDruzyn) { //ma koncu wrzucamy grupe
         MeczLiny mecz = new MeczLiny();
-        int ktoWygral = mecz.MeczLiny(sedzia, druzyna1, druzyna2);
+        int ktoWygral = mecz.rozegrajMecz(sedzia, druzyna1, druzyna2);
 
         if (ktoWygral == 1) {
             int ilePunktow = druzyna1.getPunkty() + 3;
@@ -91,7 +91,7 @@ public abstract class Turniej {
 
     public void RozegrajMeczOgni(Sedzia sedzia, Druzyna druzyna1, Druzyna druzyna2, HashMap<Druzyna, Integer> listaDruzyn) { //
         MeczLiny mecz = new MeczLiny();
-        int ktoWygral = mecz.MeczLiny(sedzia, druzyna1, druzyna2);
+        int ktoWygral = mecz.rozegrajMecz(sedzia, druzyna1, druzyna2);
 
         if (ktoWygral == 1) {
             int ilePunktow = druzyna1.getPunkty() + 3;
@@ -107,7 +107,7 @@ public abstract class Turniej {
 
     public void RozegrajMeczSiatkowki(Sedzia sedzia, Druzyna druzyna1, Druzyna druzyna2, HashMap<Druzyna, Integer> listaDruzyn) { //ma koncu wrzucamy grupe
         MeczLiny mecz = new MeczLiny();
-        int ktoWygral = mecz.MeczLiny(sedzia, druzyna1, druzyna2);
+        int ktoWygral = mecz.rozegrajMecz(sedzia, druzyna1, druzyna2);
 
         if (ktoWygral == 1) {
             int ilePunktow = druzyna1.getPunkty() + 3;
