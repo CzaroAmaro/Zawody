@@ -38,9 +38,13 @@ public class Wyspa {
                 sklep.wyswietl();
                 System.out.println("Twoje saldo: " + nasza.getSaldo());
                 a = x.nextInt() - 1;
-                nasza.dodajZawodnika(sklep.getZawodnik(a));
-                nasza.wyplac(sklep.getZawodnik(a).getCena());
-                sklep.kupiony(a);
+                if (a>=0 && a< sklep.getIloscZ()) {
+                    nasza.dodajZawodnika(sklep.getZawodnik(a));
+                    nasza.wyplac(sklep.getZawodnik(a).getCena());
+                    sklep.kupiony(a);
+                }
+                else System.out.println("Nie ma takiego zawodnika! Wybierz jeszcze raz");
+                i--;
             }
             else {
                 System.out.println("Brak pieniędzy, dobieranie zawodników zakończone");
