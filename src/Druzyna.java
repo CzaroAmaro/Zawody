@@ -79,7 +79,7 @@ public class Druzyna implements Serializable {
     }
     public void wyswietlReprezentacje(){
         for (int i=0; i<iloscRep; i++){
-            reprezentacja.get(i).toString();
+            System.out.println(i+1 + ". " + reprezentacja.get(i).toString());
         }
     }
     public void wyswietlPrzedmioty(){
