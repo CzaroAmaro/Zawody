@@ -18,10 +18,15 @@ public class MeczOgni extends Mecz implements Serializable {
         int suma1 = luck1 + sumaC1 + sumaR1;
         int suma2 = luck2 + sumaC2 + sumaR2;
 
-        if (suma1 > suma2)
+        if(suma1 > suma2){
+            System.out.println("Mecz wygrany przez drużynę nr1"+ "\n" +"Mecz nadzorował Sędzia: " + Sedzia.getNazwisko());
             return 1;
-        else
+        }
+
+        else{
+            System.out.println("Mecz wygrany przez drużynę nr1"+ "\n" +"Mecz nadzorował Sędzia: " + Sedzia.getNazwisko());
             return 2;
+        }
     }
 
     private int obliczSumeCelnosci(Druzyna druzyna){
