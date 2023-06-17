@@ -19,14 +19,16 @@ public class MeczSiatkowki extends Mecz implements Serializable {
         int suma1 = luck1 + sumaW1 + sumaS1;
         int suma2 = luck2 + sumaW2 + sumaS2;
 
+        System.out.println("Mecz" + druzyna1.getNazwaDruzyny() + " " + "vs" + " " + druzyna2.getNazwaDruzyny());
+
         if(suma1 > suma2){
-            System.out.println("Mecz wygrany przez drużynę nr1"+ "\n" +"Mecz nadzorował Sędzia: " + Sedzia.getNazwisko() + "oraz 2 sędziów" +
+            System.out.println("Mecz wygrany przez drużynę " + druzyna1.getNazwaDruzyny() + "\n" +"Mecz nadzorował Sędzia: " + Sedzia.getNazwisko() + "oraz 2 sędziów" +
                     "pomocnicznych: " + Sedziapom1.getNazwisko() + " " + Sedziapom2.getNazwisko() );
             return 1;
         }
 
         else{
-            System.out.println("Mecz wygrany przez drużynę nr2"+ "\n" +"Mecz nadzorował Sędzia: " + Sedzia.getNazwisko() + "oraz 2 sędziów" +
+            System.out.println("Mecz wygrany przez drużynę " + druzyna2.getNazwaDruzyny() + "\n" +"Mecz nadzorował Sędzia: " + Sedzia.getNazwisko() + "oraz 2 sędziów" +
                     "pomocnicznych: " + Sedziapom1.getNazwisko() + " " + Sedziapom2.getNazwisko() );
             return 2;
         }

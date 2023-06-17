@@ -6,6 +6,7 @@ import java.util.Scanner;
 public class Wyspa {
     private static ArrayList<Druzyna> listaDruzyn = new ArrayList<Druzyna>();
     private int iloscDruzyn = 0;
+    private Druzyna naszaDruzyna;
     public void dodajDruzyne(Druzyna a){
         listaDruzyn.add(a);
         iloscDruzyn += 1;
@@ -52,6 +53,47 @@ public class Wyspa {
             }
 
         }
+        System.out.println("Czy chcesz zarządzać sędziami ? " + "\n" + "Tak/Nie");
+        String wybor = x.next();
+        if (wybor.equals("Tak") || wybor.equals("tak")){
+            boolean zakoncz = false;
+            while (!zakoncz){
+                System.out.println("Wybierz operacje:");
+                System.out.println("1. Dodaj sedziego");
+                System.out.println("2. Usun sedziego");
+                System.out.println("3. Wyswietl sedziow");
+                System.out.println("0. Zakoncz");
+
+                int operacja = x.nextInt();
+                x.nextLine();
+
+                switch (operacja){
+                    case 1:
+                        System.out.printf("Podaj nazwisko sedziego: ");
+                        String nazwisko = x.nextLine();
+                        Sedzia.dodajSedziego(nazwisko);
+                        break;
+                    case 2:
+                        System.out.println("Podaj index sedziego do usunięcia:");
+                        int nazwiskoUsun = x.nextInt();
+                        Sedzia.usunSedziego(nazwiskoUsun);
+                        break;
+                    case 3:
+                        System.out.println("Lista sędziów:");
+                        Sedzia.wyswietlSedziow();
+                        break;
+                    case 4:
+                        zakoncz = true;
+                        break;
+                    default:
+                        System.out.println("Niepoprawna operacja");
+                }
+            }
+        }
+
+
+
+        naszaDruzyna = nasza;
         ZarzadzanieDruzyna zarzadz = new ZarzadzanieDruzyna();
         zarzadz.interfejs(nasza);
         dodajDruzyne(nasza);
@@ -84,5 +126,18 @@ public class Wyspa {
         listaDruzyn.remove(0);
         listaDruzyn.remove(0);
         return  grupy;
+    }
+
+    public  void zarzadzajDruzynaa() {
+        ZarzadzanieDruzyna zarzadz = new ZarzadzanieDruzyna();
+        zarzadz.interfejs(naszaDruzyna);
+    }
+    public void wyswietlGrupy(Grupy grupaA, Grupy grupaB, Wyspa wyspa) {
+        System.out.println("Grupa A");
+        grupaA.wyswietlGrupe();
+
+        System.out.println("Grupa B");
+        grupaB.wyswietlGrupe();
+        wyspa.zarzadzajDruzynaa();
     }
 }

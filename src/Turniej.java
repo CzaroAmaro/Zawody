@@ -120,4 +120,8 @@ public abstract class Turniej {
             druzyna1.dodajpunkty(3);
         }
     }
+    public void RozegrajMecze() {
+
+    }
+
 }

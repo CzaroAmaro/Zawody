@@ -40,10 +40,10 @@ public class ZarzadzanieDruzyna {
             else System.out.println("Nie ma takiego zawodnika");
         }while(b!=0);
     }
-    public void reprezentacja(Druzyna druzyna){
-        int c=0;
+    public void reprezentacja(Druzyna druzyna) {
+        int c = 0;
         Scanner x = new Scanner(System.in);
-        do{
+        do {
             System.out.println("Reprezentacja:");
             druzyna.wyswietlReprezentacje();
             System.out.println();
@@ -53,45 +53,42 @@ public class ZarzadzanieDruzyna {
             System.out.println("3. Usuń zawdonika z reprezentacji");
             System.out.println("4. Użyj przedmiotu na zawodniku");
             c = x.nextInt();
-            if (c==1){
-                if (c==1){
-                System.out.println("Który zawodnik?");
-                int b = x.nextInt();
-                if (b>0 && b<=druzyna.getIloscRep()) {
-                    druzyna.getRep(b - 1).showStaty();
+
+                if (c == 1) {
+                    System.out.println("Który zawodnik?");
+                    int b = x.nextInt();
+                    if (b > 0 && b <= druzyna.getIloscRep()) {
+                        druzyna.getRep(b - 1).showStaty();
+                    } else System.out.println("NIe ma takiego zawodnika");
                 }
-                else System.out.println("NIe ma takiego zawodnika");
-            }
-            if (c==2){
-                System.out.println("Którego zawodnika chcesz dodać?");
-                druzyna.wyswietlZawodnikow();
-                int b = x.nextInt();
-                if (b>0 && b <= druzyna.getIloscZawodnikow()) {
-                    druzyna.dodajDoRep(b - 1);
+                if (c == 2) {
+                    System.out.println("Którego zawodnika chcesz dodać?");
+                    druzyna.wyswietlZawodnikow();
+                    int b = x.nextInt();
+                    if (b > 0 && b <= druzyna.getIloscZawodnikow()) {
+                        druzyna.dodajDoRep(b - 1);
+                    } else System.out.println("NIe ma takiego zawodnika");
                 }
-                else System.out.println("NIe ma takiego zawodnika");
-            }
-            if (c==3){
-                System.out.println("Którego zawodnika chcesz usunąć?");
-                int b = x.nextInt();
-                if (b>0 && b <= druzyna.getIloscRep()) {
-                    druzyna.usunZRep(b - 1);
+                if (c == 3) {
+                    System.out.println("Którego zawodnika chcesz usunąć?");
+                    int b = x.nextInt();
+                    if (b > 0 && b <= druzyna.getIloscRep()) {
+                        druzyna.usunZRep(b - 1);
+                    } else System.out.println("Nie ma takiego zawodnika");
                 }
-                else System.out.println("Nie ma takiego zawodnika");
-            }
-            if (c==4){
-                System.out.println("Na którym zawodniku chcesz użyć przedmiotu?");
-                int bb = x.nextInt();
-                System.out.println("Jakiego przedmiotu chcesz użyć?");
-                druzyna.wyswietlPrzedmioty();
-                int cc = x.nextInt();
-                if (bb <= druzyna.getIloscRep() && cc <= druzyna.getIloscPrzedmiotow() && bb >= 0 && cc >= 0) {
-                   // druzyna.getPrzedmiot(cc-1).uzyj(druzyna.getRep(bb-1));
-                    druzyna.usunPrzedmiot(cc-1);
+                if (c == 4) {
+                    System.out.println("Na którym zawodniku chcesz użyć przedmiotu?");
+                    int bb = x.nextInt();
+                    System.out.println("Jakiego przedmiotu chcesz użyć?");
+                    druzyna.wyswietlPrzedmioty();
+                    int cc = x.nextInt();
+                    if (bb <= druzyna.getIloscRep() && cc <= druzyna.getIloscPrzedmiotow() && bb >= 0 && cc >= 0) {
+                        // druzyna.getPrzedmiot(cc-1).uzyj(druzyna.getRep(bb-1));
+                        druzyna.usunPrzedmiot(cc - 1);
+                    } else System.out.println("Błąd");
                 }
-                else System.out.println("Błąd");
-            }
-        }while(c!=0);
+
+        } while (c != 0) ;
     }
     public void kupPrzedmioty(Druzyna druzyna){
         Scanner x = new Scanner(System.in);

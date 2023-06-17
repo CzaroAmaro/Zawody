@@ -1,31 +1,27 @@
 package src;
 
 public class main {
-    public static void main(String[] args) {
-        Wyspa wyspa = new Wyspa();
 
+    public static void main(String[] args) {
+
+        Wyspa wyspa = new Wyspa();
         Grupy grupaA = wyspa.stworzGrupe();
         Grupy grupaB = wyspa.stworzGrupe();
 
-        MeczLiny meczLiny = new MeczLiny();
-        Sedzia testowy = new Sedzia("janek");
+        grupaA.Zagraj1TureMeczuLiny();
+        grupaB.Zagraj1TureMeczuLiny();
 
-        Druzyna druzyna1 = grupaA.zwrocDruzyne(0);
-        Druzyna druzyna2 = grupaA.zwrocDruzyne(1);
+        wyspa.wyswietlGrupy(grupaA, grupaB, wyspa);
 
-        int ktoWygraŁ = meczLiny.rozegrajMecz(testowy,druzyna1, druzyna2);
+        grupaA.Zagraj2TureMeczuLiny();
+        grupaB.Zagraj2TureMeczuLiny();
 
-        if(ktoWygraŁ == 1) {
-            grupaA.dodajPunktyDruzynie(druzyna1);
-        } else {
-            grupaA.dodajPunktyDruzynie(druzyna2);
-        }
+        wyspa.wyswietlGrupy(grupaA, grupaB, wyspa);
 
-        System.out.println("Grupa A");
-        grupaA.wyswietlGrupe();
+        grupaA.Zagraj3TureMeczuLiny();
+        grupaB.Zagraj3TureMeczuLiny();
 
-        System.out.println("Grupa B");
-        grupaB.wyswietlGrupe();
+        wyspa.wyswietlGrupy(grupaA, grupaB, wyspa);
 
     }
 }

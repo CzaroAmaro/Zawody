@@ -34,6 +34,9 @@ public class Druzyna implements Serializable {
         currentID += 1;
         Zawodnicy = new ArrayList<Zawodnik>();
     }
+    public String getNazwaDruzyny(){
+        return nazwaDruzyny;
+    }
     public void dodajpunkty(int a){
         punkty += a;
     }

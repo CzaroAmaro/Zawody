@@ -35,4 +35,72 @@ public class Grupy {
         }
         return zwracana;
     }
+    public void Zagraj1TureMeczuLiny() {
+        Druzyna druzyna1 = zwrocDruzyne(0);
+        Druzyna druzyna2 = zwrocDruzyne(1);
+        Druzyna druzyna3 = zwrocDruzyne(2);
+        Druzyna druzyna4 = zwrocDruzyne(3);
+
+
+        MeczLiny meczLiny = new MeczLiny();
+        int ktoWygraŁ = meczLiny.rozegrajMecz(Sedzia.getSedzia(),druzyna1, druzyna2);
+        if(ktoWygraŁ == 1) {
+            dodajPunktyDruzynie(druzyna1);
+        } else {
+            dodajPunktyDruzynie(druzyna2);
+        }
+
+        ktoWygraŁ = meczLiny.rozegrajMecz(Sedzia.getSedzia(),druzyna3, druzyna4);
+        if(ktoWygraŁ == 1) {
+            dodajPunktyDruzynie(druzyna3);
+        } else {
+            dodajPunktyDruzynie(druzyna4);
+        }
+    }
+
+    public void Zagraj2TureMeczuLiny() {
+        Druzyna druzyna1 = zwrocDruzyne(0);
+        Druzyna druzyna2 = zwrocDruzyne(1);
+        Druzyna druzyna3 = zwrocDruzyne(2);
+        Druzyna druzyna4 = zwrocDruzyne(3);
+
+
+        MeczLiny meczLiny = new MeczLiny();
+        int ktoWygraŁ = meczLiny.rozegrajMecz(Sedzia.getSedzia(),druzyna1, druzyna3);
+        if(ktoWygraŁ == 1) {
+            dodajPunktyDruzynie(druzyna1);
+        } else {
+            dodajPunktyDruzynie(druzyna3);
+        }
+
+        ktoWygraŁ = meczLiny.rozegrajMecz(Sedzia.getSedzia(),druzyna2, druzyna4);
+        if(ktoWygraŁ == 1) {
+            dodajPunktyDruzynie(druzyna2);
+        } else {
+            dodajPunktyDruzynie(druzyna4);
+        }
+    }
+
+    public void Zagraj3TureMeczuLiny() {
+        Druzyna druzyna1 = zwrocDruzyne(0);
+        Druzyna druzyna2 = zwrocDruzyne(1);
+        Druzyna druzyna3 = zwrocDruzyne(2);
+        Druzyna druzyna4 = zwrocDruzyne(3);
+
+
+        MeczLiny meczLiny = new MeczLiny();
+        int ktoWygraŁ = meczLiny.rozegrajMecz(Sedzia.getSedzia(),druzyna1, druzyna4);
+        if(ktoWygraŁ == 1) {
+            dodajPunktyDruzynie(druzyna1);
+        } else {
+            dodajPunktyDruzynie(druzyna4);
+        }
+
+        ktoWygraŁ = meczLiny.rozegrajMecz(Sedzia.getSedzia(),druzyna2, druzyna3);
+        if(ktoWygraŁ == 1) {
+            dodajPunktyDruzynie(druzyna2);
+        } else {
+            dodajPunktyDruzynie(druzyna3);
+        }
+    }
 }
