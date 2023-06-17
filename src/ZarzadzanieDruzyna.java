@@ -56,9 +56,13 @@ public class ZarzadzanieDruzyna {
             System.out.println("4. Użyj przedmiotu na zawodniku");
             c = x.nextInt();
             if (c==1){
+                if (c==1){
                 System.out.println("Który zawodnik?");
                 int b = x.nextInt();
-                druzyna.getRep(b-1).showStaty();
+                if (b>=0 && b<druzyna.getIloscRep()) {
+                    druzyna.getRep(b - 1).showStaty();
+                }
+                else System.out.println("NIe ma takiego zawodnika");
             }
             if (c==2){
                 System.out.println("Którego zawodnika chcesz dodać?");
