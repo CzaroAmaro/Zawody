@@ -52,8 +52,8 @@ public class Wyspa {
             }
 
         }
-        ZarzadzanieDruzyna zarzadz = new ZarzadzanieDruzyna();
-        zarzadz.interfejs(nasza);
+        //ZarzadzanieDruzyna zarzadz = new ZarzadzanieDruzyna();
+        //zarzadz.interfejs(nasza);
         dodajDruzyne(nasza);
 
         String imie1, nazwa1;
@@ -62,7 +62,6 @@ public class Wyspa {
         for(int i=1; i<8; i++){
             nazwa1 = BazaNazwDruzyn.wybierz(xx.nextInt(1, 21));
             Druzyna nowa = new Druzyna(nazwa1);
-            dodajDruzyne(nowa);
             for (int j=0; j<6; j++){
                 sila = xx.nextInt(50, 101);
                 refleks = xx.nextInt(50, 101);
@@ -77,6 +76,7 @@ public class Wyspa {
             }
             dodajDruzyne(nowa);
         }
+        System.out.println("WIELKOSCCC" + listaDruzyn.size());
     }
     public Grupy  stworzGrupe() {
         Grupy grupy = new Grupy(listaDruzyn.get(0),listaDruzyn.get(1),listaDruzyn.get(2),listaDruzyn.get(3));
