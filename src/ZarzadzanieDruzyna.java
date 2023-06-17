@@ -171,6 +171,9 @@ public class ZarzadzanieDruzyna {
                 }
                 else System.out.println("Za mało pieniędzy!");
             }
+            if (d != 0 && d != 1 && d != 2 && d != 4 && d != 5 && d != 6){
+                System.out.println("Nie ma takiego przedmiotu");
+            }
         }while(d!=0);
     }
 }
