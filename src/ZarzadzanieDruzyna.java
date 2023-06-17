@@ -76,7 +76,10 @@ public class ZarzadzanieDruzyna {
             if (c==3){
                 System.out.println("Którego zawodnika chcesz usunąć?");
                 int b = x.nextInt();
-                druzyna.usunZRep(b-1);
+                if (b>0 && b <= druzyna.getIloscRep()) {
+                    druzyna.usunZRep(b - 1);
+                }
+                else System.out.println("Nie ma takiego zawodnika");
             }
             if (c==4){
                 System.out.println("Na którym zawodniku chcesz użyć przedmiotu?");
