@@ -37,7 +37,9 @@ public class ZarzadzanieDruzyna {
             if (opcja1 > 0 && opcja1 <= druzyna.getIloscZawodnikow()) {
                 druzyna.getZawodnik(opcja1 - 1).showStaty();
             }
-            else System.out.println("Nie ma takiego zawodnika");
+            else {
+                if (opcja1 != 0) System.out.println("Nie ma takiego zawodnika");
+            }
         }while(opcja1 != 0);
     }
     public void reprezentacja(Druzyna druzyna){
