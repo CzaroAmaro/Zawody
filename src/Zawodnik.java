@@ -57,26 +57,26 @@ public class Zawodnik {
             cena = 200;
         }
     }
-    public void addSila(int a){
-        sila += a;
+    public void addSila(int iloscSily){
+        sila += iloscSily;
     }
-    public void addRefleks(int a){
-        refleks += a;
+    public void addRefleks(int iloscRefleksu){
+        refleks += iloscRefleksu;
     }
-    public void addSzybkosc(int a){
-        szybkosc += a;
+    public void addSzybkosc(int iloscSzybkosci){
+        szybkosc += iloscSzybkosci;
     }
-    public void addCelnosc(int a){
-        celnosc += a;
+    public void addCelnosc(int iloscCelnosci){
+        celnosc += iloscCelnosci;
     }
-    public void addWzrost(int a){
-        wzrost += a;
+    public void addWzrost(int iloscWzrostu){
+        wzrost += iloscWzrostu;
     }
-    public void addWaga(int a){
-        waga += a;
+    public void addWaga(int iloscWagi){
+        waga += iloscWagi;
     }
-    public void zmienImie(String a){
-        imie = a;
+    public void zmienImie(String noweImie){
+        imie = noweImie;
     }
     public String getImie(){
         return imie;
