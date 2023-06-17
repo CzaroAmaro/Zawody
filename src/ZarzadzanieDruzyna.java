@@ -34,12 +34,10 @@ public class ZarzadzanieDruzyna {
             System.out.println("Pokaż szczególy zawodnika");
             System.out.println("Wciśnij 0 aby wyjść");
             b = x.nextInt();
-            if (b>0) {
+            if (b>0 && b <= druzyna.getIloscZawodnikow()) {
                 druzyna.getZawodnik(b - 1).showStaty();
             }
-            if(b<0) {
-                System.out.println("Bład");
-            }
+            else System.out.println("Nie ma takiego zawodnika");
         }while(b!=0);
     }
     public void reprezentacja(Druzyna druzyna){
