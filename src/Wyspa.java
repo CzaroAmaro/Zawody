@@ -53,7 +53,7 @@ public class Wyspa {
         Random xx = new Random();
         int sila, refleks, szybkosc, celnosc, wzrost, waga;
         for(int i=1; i<8; i++){
-            nazwa1 = BazaNazwDruzyn. wybierz(xx.nextInt(1, 21));
+            nazwa1 = BazaNazwDruzyn.wybierz(xx.nextInt(1, 21));
             Druzyna nowa = new Druzyna(nazwa1);
             dodajDruzyne(nowa);
             for (int j=0; j<6; j++){
