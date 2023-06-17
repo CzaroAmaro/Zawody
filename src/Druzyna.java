@@ -9,7 +9,7 @@ public class Druzyna implements Serializable {
     private int iloscRep = 0;
     private int iloscPrzedmiotow = 0;
     private int punkty = 0;
-    private int saldo = 2000;
+    private int saldo = 20000;
     public int druzynaID;
     public static int currentID = 1;
     public int IloscZwyciestw = 0;

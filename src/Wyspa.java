@@ -28,7 +28,7 @@ public class Wyspa {
         Druzyna nasza = new Druzyna(nazwa);
         Sklep sklep = new Sklep();
         int a;
-        for(int i=1; i<=7; i++){
+        for(int i=1; i<=12; i++){
             if(nasza.getSaldo()>=50) {
                 System.out.println("Aktualni zawodnicy:");
                 nasza.wyswietlZawodnikow();
@@ -41,14 +41,21 @@ public class Wyspa {
                     nasza.wyplac(sklep.getZawodnik(a).getCena());
                     sklep.kupiony(a);
                 }
-                else System.out.println("Nie ma takiego zawodnika! Wybierz jeszcze raz");
-                i--;
+                else {
+                    System.out.println("Nie ma takiego zawodnika! Wybierz jeszcze raz");
+                    i--;
+                }
+
             }
             else {
                 System.out.println("Brak pieniędzy, dobieranie zawodników zakończone");
             }
+
         }
+        ZarzadzanieDruzyna zarzadz = new ZarzadzanieDruzyna();
+        zarzadz.interfejs(nasza);
         dodajDruzyne(nasza);
+
         String imie1, nazwa1;
         Random xx = new Random();
         int sila, refleks, szybkosc, celnosc, wzrost, waga;
