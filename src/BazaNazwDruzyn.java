@@ -1,49 +1,38 @@
 package src;
+import java.util.ArrayList;
 public class BazaNazwDruzyn {
-    public static String wybierz(int a) {
-        switch (a) {
-            case 1:
-                return "Cegła team";
-            case 2:
-                return "Białostocka komunikacja miejska";
-            case 3:
-                return "Dzikie kasztany";
-            case 4:
-                return "Dżungla team";
-            case 5:
-                return "Bezbeki";
-            case 6:
-                return "PROGRAMIŚCIIIII";
-            case 7:
-                return "Weeb team";
-            case 8:
-                return "Wuefiści team";
-            case 9:
-                return "Pasieka team";
-            case 10:
-                return "Zdana sesja";
-            case 11:
-                return "Krzysztof Tyniec fanbois";
-            case 12:
-                return "Ninjów garść";
-            case 13:
-                return "Franklin i przyjaciele";
-            case 14:
-                return "Latający cyrk monty pajtona";
-            case 15:
-                return "Luzik arbuzik";
-            case 16:
-                return "Kiść bananów team";
-            case 17:
-                return "Słoik team";
-            case 18:
-                return "You shall not pass team";
-            case 19:
-                return "Dzikie szony";
-            case 20:
-                return "Gąszcz";
-            default:
-                return "Gostyń team";
-        }
+    private static ArrayList <String> bazaNazwDruzyn  = new ArrayList<>();
+    private static int iloscNazw = 21;
+    public BazaNazwDruzyn(){
+        bazaNazwDruzyn.add("Cagła team");
+        bazaNazwDruzyn.add("Białostocka komunikacja miejska");
+        bazaNazwDruzyn.add("Dzikie kasztany");
+        bazaNazwDruzyn.add("Dżungla team");
+        bazaNazwDruzyn.add("Bezbeki");
+        bazaNazwDruzyn.add("PROGRAMIŚCIIIII");
+        bazaNazwDruzyn.add("Weeb team");
+        bazaNazwDruzyn.add("Wuefiści team");
+        bazaNazwDruzyn.add("Paśnik team");
+        bazaNazwDruzyn.add("Zdana sesja");
+        bazaNazwDruzyn.add("Krzysztof Tyniec fanbois");
+        bazaNazwDruzyn.add("Ninjów garść");
+        bazaNazwDruzyn.add("Franklin i przyjaciele");
+        bazaNazwDruzyn.add("Latający cyrk monty pajtona");
+        bazaNazwDruzyn.add("Luzik arbuzik");
+        bazaNazwDruzyn.add("Kiść bananów team");
+        bazaNazwDruzyn.add("Słoik team");
+        bazaNazwDruzyn.add("You shall not pass team");
+        bazaNazwDruzyn.add("Dzikie szony");
+        bazaNazwDruzyn.add("Gąszcz");
+        bazaNazwDruzyn.add("Gostyń team");
+    }
+    public static int getIloscNazw(){
+        return iloscNazw;
+    }
+    public static String wybierzNazwe(int a){
+        String wybranaNazwa = bazaNazwDruzyn.get(a);
+        bazaNazwDruzyn.remove(a);
+        iloscNazw--;
+        return wybranaNazwa;
     }
 }
