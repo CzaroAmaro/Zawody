@@ -48,7 +48,7 @@ public class Druzyna implements Serializable {
             iloscRep ++;
             iloscZawodnikow--;
         }
-        else System.out.println("Bład, nie ma takiego zawodnika");
+        else System.out.println("Maksymalna ilość zawodników w reprezentacji");
     }
     public void usunZRep(int a){
         if (a<6 && a>-1){
