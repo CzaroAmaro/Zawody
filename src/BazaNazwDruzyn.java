@@ -29,9 +29,9 @@ public class BazaNazwDruzyn {
     public static int getIloscNazw(){
         return iloscNazw;
     }
-    public static String wybierzNazwe(int a){
-        String wybranaNazwa = bazaNazwDruzyn.get(a);
-        bazaNazwDruzyn.remove(a);
+    public static String wybierzNazwe(int numerNazwy){
+        String wybranaNazwa = bazaNazwDruzyn.get(numerNazwy);
+        bazaNazwDruzyn.remove(numerNazwy);
         iloscNazw--;
         return wybranaNazwa;
     }
