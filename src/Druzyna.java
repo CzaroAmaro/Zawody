@@ -1,7 +1,6 @@
 package src;
 import java.io.Serializable;
 import java.util.ArrayList;
-
 public class Druzyna implements Serializable {
     public ArrayList<Zawodnik> Zawodnicy;
     private ArrayList<Zawodnik> reprezentacja = new ArrayList<Zawodnik>();
@@ -38,6 +37,10 @@ public class Druzyna implements Serializable {
     public void dodajpunkty(int a){
         punkty += a;
     }
+    public void dodajZawodnika(Zawodnik a){
+        Zawodnicy.add(a);
+        iloscZawodnikow += 1;
+    }
     public void dodajDoRep(int a){
         if (iloscRep<6){
             reprezentacja.add(Zawodnicy.get(a));
@@ -45,6 +48,7 @@ public class Druzyna implements Serializable {
             iloscRep ++;
             iloscZawodnikow--;
         }
+        else System.out.println("Bład, nie ma takiego zawodnika");
     }
     public void usunZRep(int a){
         if (a<6 && a>-1){
@@ -62,12 +66,6 @@ public class Druzyna implements Serializable {
     public void usunPrzedmiot(int a){
         przedmioty.remove(a);
         iloscPrzedmiotow--;
-    }
-    public void usunZRep(int a){
-        if (a<6 && a>-1){
-            reprezentacja.remove(a);
-        }
-        else System.out.println("Błąd");
     }
     public Zawodnik getZawodnik(int a){
         return Zawodnicy.get(a);
@@ -118,6 +116,6 @@ public class Druzyna implements Serializable {
         return iloscPrzedmiotow;
     }
     public String toString(){
-        return "Druzyna: " + nazwaDruzyny + " ilość punktów: " + punkty;
+        return "Druzyna: " + nazwaDruzyny + "    ilość punktów: " + punkty;
     }
 }
