@@ -37,51 +37,51 @@ public class Druzyna implements Serializable {
     public String getNazwaDruzyny(){
         return nazwaDruzyny;
     }
-    public void dodajpunkty(int a){
-        punkty += a;
+    public void dodajpunkty(int iloscPunktow){
+        punkty += iloscPunktow;
     }
-    public void dodajZawodnika(Zawodnik a){
-        Zawodnicy.add(a);
+    public void dodajZawodnika(Zawodnik zawodnik){
+        Zawodnicy.add(zawodnik);
         iloscZawodnikow += 1;
     }
-    public void dodajDoRep(int a){
+    public void dodajDoRep(int numerZawodnika){
         if (iloscRep<6){
-            reprezentacja.add(Zawodnicy.get(a));
-            Zawodnicy.remove(a);
+            reprezentacja.add(Zawodnicy.get(numerZawodnika));
+            Zawodnicy.remove(numerZawodnika);
             iloscRep ++;
             iloscZawodnikow--;
         }
         else System.out.println("Maksymalna ilość zawodników w reprezentacji");
     }
-    public void usunZRep(int a){
-        if (a<6 && a>-1){
-            Zawodnicy.add(reprezentacja.get(a));
-            reprezentacja.remove(a);
+    public void usunZRep(int numerZawodnika){
+        if (numerZawodnika<6 && numerZawodnika>-1){
+            Zawodnicy.add(reprezentacja.get(numerZawodnika));
+            reprezentacja.remove(numerZawodnika);
             iloscZawodnikow++;
             iloscRep--;
         }
         else System.out.println("Błąd");
     }
-    public void dodajPrzedmiot(Przedmiot a){
-        przedmioty.add(a);
+    public void dodajPrzedmiot(Przedmiot przedmiot){
+        przedmioty.add(przedmiot);
         iloscPrzedmiotow +=1;
     }
-    public void usunPrzedmiot(int a){
-        przedmioty.remove(a);
+    public void usunPrzedmiot(int numerPrzedmiotu){
+        przedmioty.remove(numerPrzedmiotu);
         iloscPrzedmiotow--;
     }
-    public Zawodnik getZawodnik(int a){
-        return Zawodnicy.get(a);
+    public Zawodnik getZawodnik(int numerZawodnika){
+        return Zawodnicy.get(numerZawodnika);
     }
-    public Zawodnik getRep(int a){
-        return reprezentacja.get(a);
+    public Zawodnik getRep(int numerZawodnika){
+        return reprezentacja.get(numerZawodnika);
     }
-    public void wplac(int a){
-        saldo += a;
+    public void wplac(int suma){
+        saldo += suma;
     }
-    public void wyplac(int a){
-        if (saldo > a) {
-            saldo -= a;
+    public void wyplac(int suma){
+        if (saldo > suma) {
+            saldo -= suma;
         }
         else System.out.println("Za mało pieniędzy na koncie!");
     }
@@ -100,8 +100,8 @@ public class Druzyna implements Serializable {
             System.out.println(i+1 + ". " + przedmioty.get(i).toString());
         }
     }
-    public Przedmiot getPrzedmiot(int a){
-        return przedmioty.get(a);
+    public Przedmiot getPrzedmiot(int numerPrzedmiotu){
+        return przedmioty.get(numerPrzedmiotu);
     }
     public int getPunkty(){
         return punkty;
