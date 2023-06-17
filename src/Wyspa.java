@@ -26,10 +26,9 @@ public class Wyspa {
         System.out.println("Podaj nazwę swojej drużyny:");
         String nazwa = x.next();
         Druzyna nasza = new Druzyna(nazwa);
-        dodajDruzyne(nasza);
         Sklep sklep = new Sklep();
         int a;
-        for(int i=1; i<=12; i++){
+        for(int i=1; i<=7; i++){
             if(nasza.getSaldo()>=50) {
                 System.out.println("Aktualni zawodnicy:");
                 nasza.wyswietlZawodnikow();
@@ -49,6 +48,7 @@ public class Wyspa {
                 System.out.println("Brak pieniędzy, dobieranie zawodników zakończone");
             }
         }
+        dodajDruzyne(nasza);
         String imie1, nazwa1;
         Random xx = new Random();
         int sila, refleks, szybkosc, celnosc, wzrost, waga;
@@ -68,6 +68,15 @@ public class Wyspa {
                 nowa.dodajZawodnika(aa);
                 nowa.dodajDoRep(0);
             }
+            dodajDruzyne(nowa);
         }
+    }
+    public Grupy  stworzGrupe() {
+        Grupy grupy = new Grupy(listaDruzyn.get(0),listaDruzyn.get(1),listaDruzyn.get(2),listaDruzyn.get(3));
+        listaDruzyn.remove(0);
+        listaDruzyn.remove(1);
+        listaDruzyn.remove(2);
+        listaDruzyn.remove(3);
+        return  grupy;
     }
 }

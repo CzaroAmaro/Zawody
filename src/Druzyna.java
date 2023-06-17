@@ -118,4 +118,7 @@ public class Druzyna implements Serializable {
     public String toString(){
         return "Druzyna: " + nazwaDruzyny + "    ilość punktów: " + punkty;
     }
+    public String getNazwa() {
+        return nazwaDruzyny;
+    }
 }
