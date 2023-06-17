@@ -68,7 +68,10 @@ public class ZarzadzanieDruzyna {
                 System.out.println("Którego zawodnika chcesz dodać?");
                 druzyna.wyswietlZawodnikow();
                 int b = x.nextInt();
-                druzyna.dodajDoRep(b-1);
+                if (b>0 && b <= druzyna.getIloscZawodnikow()) {
+                    druzyna.dodajDoRep(b - 1);
+                }
+                else System.out.println("NIe ma takiego zawodnika");
             }
             if (c==3){
                 System.out.println("Którego zawodnika chcesz usunąć?");
