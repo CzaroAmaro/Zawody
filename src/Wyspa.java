@@ -61,8 +61,8 @@ public class Wyspa {
         int sila, refleks, szybkosc, celnosc, wzrost, waga;
         BazaNazwDruzyn bazaNazw = new BazaNazwDruzyn();
         for(int i=1; i<8; i++){
-            int numerNazwy = xx.nextInt(0, BazaNazwDruzyn.getIloscNazw());
-            nazwa1 = BazaNazwDruzyn.wybierzNazwe(numerNazwy);
+            int numerNazwy = xx.nextInt(0, bazaNazw.getIloscNazw());
+            nazwa1 = bazaNazw.wybierzNazwe(numerNazwy);
             Druzyna nowa = new Druzyna(nazwa1);
             dodajDruzyne(nowa);
             for (int j=0; j<6; j++){
