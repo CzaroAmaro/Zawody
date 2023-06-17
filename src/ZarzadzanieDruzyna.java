@@ -59,7 +59,7 @@ public class ZarzadzanieDruzyna {
                 if (c==1){
                 System.out.println("Który zawodnik?");
                 int b = x.nextInt();
-                if (b>=0 && b<druzyna.getIloscRep()) {
+                if (b>0 && b<=druzyna.getIloscRep()) {
                     druzyna.getRep(b - 1).showStaty();
                 }
                 else System.out.println("NIe ma takiego zawodnika");
