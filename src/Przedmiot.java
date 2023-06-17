@@ -9,7 +9,7 @@ public class Przedmiot {
     }
     public void opis(){
     }
-    public void uzyj(Zawodnik a){
+    public void uzyj(){
     }
     public String toString(){
         return "";

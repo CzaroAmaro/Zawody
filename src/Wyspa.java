@@ -52,8 +52,8 @@ public class Wyspa {
             }
 
         }
-        //ZarzadzanieDruzyna zarzadz = new ZarzadzanieDruzyna();
-        //zarzadz.interfejs(nasza);
+        ZarzadzanieDruzyna zarzadz = new ZarzadzanieDruzyna();
+        zarzadz.interfejs(nasza);
         dodajDruzyne(nasza);
 
         String imie1, nazwa1;
@@ -76,14 +76,13 @@ public class Wyspa {
             }
             dodajDruzyne(nowa);
         }
-        System.out.println("WIELKOSCCC" + listaDruzyn.size());
     }
     public Grupy  stworzGrupe() {
         Grupy grupy = new Grupy(listaDruzyn.get(0),listaDruzyn.get(1),listaDruzyn.get(2),listaDruzyn.get(3));
         listaDruzyn.remove(0);
-        listaDruzyn.remove(1);
-        listaDruzyn.remove(2);
-        listaDruzyn.remove(3);
+        listaDruzyn.remove(0);
+        listaDruzyn.remove(0);
+        listaDruzyn.remove(0);
         return  grupy;
     }
 }

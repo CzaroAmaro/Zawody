@@ -15,6 +15,7 @@ public class MeczLiny extends Mecz implements Serializable {
         int sumaM1 = obliczSumeMasy(druzyna1);
         int sumaM2 = obliczSumeMasy(druzyna2);
 
+
         int suma1 = luck1 + sumaS1 + sumaM1;
         int suma2 = luck2 + sumaS2 + sumaM2;
 
@@ -46,8 +47,18 @@ public class MeczLiny extends Mecz implements Serializable {
     private int obliczSzczescie(Druzyna druzyna){
         Random x = new Random();
 
-        int luck = x.nextInt(20)+80;
+        int luck = x.nextInt(80,101);
 
         return luck;
     }
+
+
+    @Override
+    public String toString(){
+        return super.toString() + druzyna1.nazwaDruzyny + "vs" + druzyna2.nazwaDruzyny
+                + "Zwyciezca: " + druzynaWygrana.nazwaDruzyny
+                + "Sedzia: " + Sedzia + "\n";
+    }
+
+
 }

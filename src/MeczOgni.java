@@ -5,7 +5,7 @@ import java.util.Random;
 
 public class MeczOgni extends Mecz implements Serializable {
 
-    public int rozegrajMecz(Sedzia sedzia, Druzyna druzyna1, Druzyna druzyna2) {
+    public int rozegrajMecz(Sedzia Sedzia, Druzyna druzyna1, Druzyna druzyna2) {
         int luck1 = obliczSzczescie(druzyna1);
         int luck2 = obliczSzczescie(druzyna2);
 

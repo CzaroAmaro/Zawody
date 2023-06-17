@@ -78,7 +78,7 @@ public class ZarzadzanieDruzyna {
                 druzyna.wyswietlPrzedmioty();
                 int cc = x.nextInt();
                 if (bb <= druzyna.getIloscRep() && cc <= druzyna.getIloscPrzedmiotow() && bb >= 0 && cc >= 0) {
-                    druzyna.getPrzedmiot(cc-1).uzyj(druzyna.getRep(bb-1));
+                   // druzyna.getPrzedmiot(cc-1).uzyj(druzyna.getRep(bb-1));
                     druzyna.usunPrzedmiot(cc-1);
                 }
                 else System.out.println("Błąd");
