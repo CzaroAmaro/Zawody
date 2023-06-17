@@ -82,7 +82,7 @@ public class Wyspa {
                         System.out.println("Lista sędziów:");
                         Sedzia.wyswietlSedziow();
                         break;
-                    case 4:
+                    case 0:
                         zakoncz = true;
                         break;
                     default:
@@ -142,4 +142,5 @@ public class Wyspa {
         grupaB.wyswietlGrupe();
         wyspa.zarzadzajDruzynaa();
     }
+
 }

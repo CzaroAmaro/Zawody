@@ -23,5 +23,15 @@ public class main {
 
         wyspa.wyswietlGrupy(grupaA, grupaB, wyspa);
 
+        grupaA.ZagrajPolfinalyMeczuLiny();
+        grupaB.ZagrajPolfinalyMeczuLiny();
+
+        wyspa.wyswietlGrupy(grupaA, grupaB, wyspa);
+
+        grupaA.ZagrajFinalMeczLiny();
+        grupaB.ZagrajFinalMeczLiny();
+
+        wyspa.wyswietlGrupy(grupaA, grupaB, wyspa);
+
     }
 }
