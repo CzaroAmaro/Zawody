@@ -3,7 +3,6 @@ package src;
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
-
 public class Wyspa {
     private static ArrayList<Druzyna> listaDruzyn = new ArrayList<Druzyna>();
     private int iloscDruzyn = 0;
@@ -69,7 +68,6 @@ public class Wyspa {
                 nowa.dodajZawodnika(aa);
                 nowa.dodajDoRep(0);
             }
-            iloscDruzyn ++;
         }
     }
 }
