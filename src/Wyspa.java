@@ -55,13 +55,16 @@ public class Wyspa {
         ZarzadzanieDruzyna zarzadz = new ZarzadzanieDruzyna();
         zarzadz.interfejs(nasza);
         dodajDruzyne(nasza);
-
+        
         String imie1, nazwa1;
         Random xx = new Random();
         int sila, refleks, szybkosc, celnosc, wzrost, waga;
+        BazaNazwDruzyn bazaNazw = new BazaNazwDruzyn();
         for(int i=1; i<8; i++){
-            nazwa1 = BazaNazwDruzyn.wybierz(xx.nextInt(1, 21));
+            int numerNazwy = xx.nextInt(0, BazaNazwDruzyn.getIloscNazw());
+            nazwa1 = BazaNazwDruzyn.wybierzNazwe(numerNazwy);
             Druzyna nowa = new Druzyna(nazwa1);
+            dodajDruzyne(nowa);
             for (int j=0; j<6; j++){
                 sila = xx.nextInt(50, 101);
                 refleks = xx.nextInt(50, 101);
@@ -74,7 +77,6 @@ public class Wyspa {
                 nowa.dodajZawodnika(aa);
                 nowa.dodajDoRep(0);
             }
-            dodajDruzyne(nowa);
         }
     }
     public Grupy  stworzGrupe() {
