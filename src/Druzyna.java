@@ -40,7 +40,6 @@ public class Druzyna implements Serializable {
     public void dodajpunkty(int a){
         punkty += a;
     }
-
     public void dodajZawodnika(Zawodnik a){
         Zawodnicy.add(a);
         iloscZawodnikow += 1;

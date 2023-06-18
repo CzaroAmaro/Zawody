@@ -1,8 +1,8 @@
 package src;
 
 public class BazaImion {
-    public static String wybierz(int a) {
-        switch (a) {
+    public static String wybierz(int numerImienia) {
+        switch (numerImienia) {
             case 1:
                 return "Szymuś";
             case 2:

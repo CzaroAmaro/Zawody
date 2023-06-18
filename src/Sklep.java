@@ -6,34 +6,34 @@ public class Sklep {
     private static final ArrayList<Zawodnik> zawodnicydowyboru = new ArrayList<Zawodnik>();
     private static int ilosc = 0;
     public Sklep(){
-        Random x = new Random();
+        Random losowa = new Random();
         String imie;
         int sila, refleks, celnosc, szybkosc, waga, losujImie, wzrost;
         for (int i=0; i<40; i++){
-            sila = x.nextInt(50, 101);
-            refleks = x.nextInt(50, 101);
-            szybkosc = x.nextInt(50, 101);
-            celnosc = x.nextInt(50, 101);
-            wzrost = x.nextInt(150, 250);
-            waga = x.nextInt(50, 121);
-            imie = BazaImion.wybierz(x.nextInt(0, 21));
-            Zawodnik a = new Zawodnik(imie, sila, refleks, szybkosc, celnosc, wzrost, waga);
-            dodajZawodnika(a);
+            sila = losowa.nextInt(50, 101);
+            refleks = losowa.nextInt(50, 101);
+            szybkosc = losowa.nextInt(50, 101);
+            celnosc = losowa.nextInt(50, 101);
+            wzrost = losowa.nextInt(150, 250);
+            waga = losowa.nextInt(50, 121);
+            imie = BazaImion.wybierz(losowa.nextInt(0, 21));
+            Zawodnik nowyZawodnik = new Zawodnik(imie, sila, refleks, szybkosc, celnosc, wzrost, waga);
+            dodajZawodnika(nowyZawodnik);
         }
     }
-    public static void dodajZawodnika(Zawodnik a){
-        zawodnicydowyboru.add(a);
+    public static void dodajZawodnika(Zawodnik zawodnik){
+        zawodnicydowyboru.add(zawodnik);
         ilosc += 1;
     }
-    public static Zawodnik getZawodnik(int a){
-        if(a>-1 && a<ilosc) {
-            return zawodnicydowyboru.get(a);
+    public static Zawodnik getZawodnik(int numerZawodnika){
+        if(numerZawodnika>-1 && numerZawodnika<ilosc) {
+            return zawodnicydowyboru.get(numerZawodnika);
         }
         else return zawodnicydowyboru.get(1);
     }
-    public void kupiony(int a){
-        if (a>-1 && a<ilosc) {
-            zawodnicydowyboru.remove(a);
+    public void kupiony(int numerZawodnika){
+        if (numerZawodnika>-1 && numerZawodnika<ilosc) {
+            zawodnicydowyboru.remove(numerZawodnika);
             ilosc -= 1;
         }
         else System.out.println("Błąd");

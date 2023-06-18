@@ -6,9 +6,9 @@ public class Piwo extends Przedmiot{
     public void opis(){
         System.out.println("Zwiększa siłę o 20, ale zmniejsza celność o 20");
     }
-   public void uzyj(Zawodnik a){
-        a.addSila(20);
-        a.addCelnosc(-20);
+   public void uzyj(Zawodnik zawodnik){
+        zawodnik.addSila(20);
+        zawodnik.addCelnosc(-20);
     }
     public String toString(){
         return "Piwo";
