@@ -19,7 +19,7 @@ public class MeczLiny extends Mecz implements Serializable {
         int suma1 = luck1 + sumaS1 + sumaM1;
         int suma2 = luck2 + sumaS2 + sumaM2;
 
-        System.out.println("Mecz" + druzyna1.getNazwaDruzyny() + " " + "vs" + " " + druzyna2.getNazwaDruzyny());
+        System.out.println("Mecz " + druzyna1.getNazwaDruzyny() + " " + "vs" + " " + druzyna2.getNazwaDruzyny());
 
         if(suma1 > suma2){
             System.out.println("Mecz wygrany przez drużynę " + druzyna1.getNazwaDruzyny() + "\n" +"Mecz nadzorował Sędzia: " + Sedzia.getNazwisko());
@@ -53,12 +53,4 @@ public class MeczLiny extends Mecz implements Serializable {
 
         return luck;
     }
-    @Override
-    public String toString(){
-        return super.toString() + druzyna1.nazwaDruzyny + "vs" + druzyna2.nazwaDruzyny
-                + "Zwyciezca: " + druzynaWygrana.nazwaDruzyny
-                + "Sedzia: " + Sedzia + "\n";
-    }
-
-
 }

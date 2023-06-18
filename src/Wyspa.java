@@ -23,10 +23,6 @@ public class Wyspa {
         }
     }
 
-    /**
-     * Bardzo wazne, na czas testownia zmieniam liczbe zawodnikow i dodaje ich
-     *  odrazu do reprezentacji!!!
-     */
     public Wyspa(){
         Scanner scanner = new Scanner(System.in);
         System.out.println("Podaj nazwę swojej drużyny:");
@@ -34,7 +30,7 @@ public class Wyspa {
         Druzyna nasza = new Druzyna(nazwa);
         Sklep sklep = new Sklep();
         int a;
-        for(int i=1; i<=6; i++){ /// zmieniam 12 na 6
+        for(int i=1; i<=12; i++){ /// zmieniam 12 na 6
             if(nasza.getSaldo()>=50) {
                 System.out.println("Aktualni zawodnicy:");
                 nasza.wyswietlZawodnikow();
@@ -58,15 +54,6 @@ public class Wyspa {
             }
 
         }
-        /**
-         * tu tez dodaje te 6 linijek
-         */
-        nasza.dodajDoRep(0);
-        nasza.dodajDoRep(0);
-        nasza.dodajDoRep(0);
-        nasza.dodajDoRep(0);
-        nasza.dodajDoRep(0);
-        nasza.dodajDoRep(0);
 
         System.out.println("Czy chcesz zarządzać sędziami ? " + "\n" + "Tak/Nie");
         String wybor = scanner.next();
