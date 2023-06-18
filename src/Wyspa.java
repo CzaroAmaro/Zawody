@@ -22,21 +22,26 @@ public class Wyspa {
             System.out.println(i+1 + ". " + listaDruzyn.get(i).toString());
         }
     }
+
+    /**
+     * Bardzo wazne, na czas testownia zmieniam liczbe zawodnikow i dodaje ich
+     *  odrazu do reprezentacji!!!
+     */
     public Wyspa(){
-        Scanner x = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         System.out.println("Podaj nazwę swojej drużyny:");
-        String nazwa = x.next();
+        String nazwa = scanner.next();
         Druzyna nasza = new Druzyna(nazwa);
         Sklep sklep = new Sklep();
         int a;
-        for(int i=1; i<=12; i++){
+        for(int i=1; i<=6; i++){ /// zmieniam 12 na 6
             if(nasza.getSaldo()>=50) {
                 System.out.println("Aktualni zawodnicy:");
                 nasza.wyswietlZawodnikow();
                 System.out.println("Wybierz zawodników do drużyny (Wybrano " + (i - 1) + "/12):");
                 sklep.wyswietl();
                 System.out.println("Twoje saldo: " + nasza.getSaldo());
-                a = x.nextInt() - 1;
+                a = scanner.nextInt() - 1;
                 if (a>=0 && a< sklep.getIloscZ()) {
                     nasza.dodajZawodnika(sklep.getZawodnik(a));
                     nasza.wyplac(sklep.getZawodnik(a).getCena());
@@ -53,8 +58,18 @@ public class Wyspa {
             }
 
         }
+        /**
+         * tu tez dodaje te 6 linijek
+         */
+        nasza.dodajDoRep(0);
+        nasza.dodajDoRep(0);
+        nasza.dodajDoRep(0);
+        nasza.dodajDoRep(0);
+        nasza.dodajDoRep(0);
+        nasza.dodajDoRep(0);
+
         System.out.println("Czy chcesz zarządzać sędziami ? " + "\n" + "Tak/Nie");
-        String wybor = x.next();
+        String wybor = scanner.next();
         if (wybor.equals("Tak") || wybor.equals("tak")){
             boolean zakoncz = false;
             while (!zakoncz){
@@ -64,18 +79,18 @@ public class Wyspa {
                 System.out.println("3. Wyswietl sedziow");
                 System.out.println("0. Zakoncz");
 
-                int operacja = x.nextInt();
-                x.nextLine();
+                int operacja = scanner.nextInt();
+                scanner.nextLine();
 
                 switch (operacja){
                     case 1:
                         System.out.printf("Podaj nazwisko sedziego: ");
-                        String nazwisko = x.nextLine();
+                        String nazwisko = scanner.nextLine();
                         Sedzia.dodajSedziego(nazwisko);
                         break;
                     case 2:
                         System.out.println("Podaj index sedziego do usunięcia:");
-                        int nazwiskoUsun = x.nextInt();
+                        int nazwiskoUsun = scanner.nextInt();
                         Sedzia.usunSedziego(nazwiskoUsun);
                         break;
                     case 3:

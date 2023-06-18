@@ -5,7 +5,7 @@ import java.util.Random;
 
 public class MeczSiatkowki extends Mecz implements Serializable {
 
-    public int rozegrajMecz(Sedzia Sedzia, Sedziapom Sedziapom1, Sedziapom Sedziapom2, Druzyna druzyna1, Druzyna druzyna2){
+    public int rozegrajMecz(Sedzia Sedzia, Sedziapom Sedziapom, Druzyna druzyna1, Druzyna druzyna2){
 
         int luck1 = obliczSzczescie(druzyna1);
         int luck2 = obliczSzczescie(druzyna2);
@@ -22,14 +22,14 @@ public class MeczSiatkowki extends Mecz implements Serializable {
         System.out.println("Mecz" + druzyna1.getNazwaDruzyny() + " " + "vs" + " " + druzyna2.getNazwaDruzyny());
 
         if(suma1 > suma2){
-            System.out.println("Mecz wygrany przez drużynę " + druzyna1.getNazwaDruzyny() + "\n" +"Mecz nadzorował Sędzia: " + Sedzia.getNazwisko() + "oraz 2 sędziów" +
-                    "pomocnicznych: " + Sedziapom1.getNazwisko() + " " + Sedziapom2.getNazwisko() );
+            System.out.println("Mecz wygrany przez drużynę " + druzyna1.getNazwaDruzyny() + "\n" +"Mecz nadzorował Sędzia: " + Sedzia.getNazwisko() + " "
+                    + "oraz 2 sędziów" + " " + "pomocnicznych: " + "Sędzia:"+ " " + Sedziapom.getNazwisko1() + " i " + Sedziapom.getNazwisko2() );
             return 1;
         }
 
         else{
-            System.out.println("Mecz wygrany przez drużynę " + druzyna2.getNazwaDruzyny() + "\n" +"Mecz nadzorował Sędzia: " + Sedzia.getNazwisko() + "oraz 2 sędziów" +
-                    "pomocnicznych: " + Sedziapom1.getNazwisko() + " " + Sedziapom2.getNazwisko() );
+            System.out.println("Mecz wygrany przez drużynę " + druzyna2.getNazwaDruzyny() + "\n" +"Mecz nadzorował Sędzia: " + Sedzia.getNazwisko() + " "
+                    + "oraz 2 sędziów" + " " + "pomocnicznych: " + "Sędzia:"+ " " + Sedziapom.getNazwisko1() + " i " + Sedziapom.getNazwisko2() );
             return 2;
         }
 

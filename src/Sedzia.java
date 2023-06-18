@@ -6,7 +6,7 @@ import java.util.Random;
 
 public class Sedzia implements Serializable{
     private String nazwisko;
-    private static List<Sedzia> listaSedziow = new ArrayList<>();
+    public static List<Sedzia> listaSedziow = new ArrayList<>();
 
     public Sedzia(String nazwisko){
         this.nazwisko = nazwisko;

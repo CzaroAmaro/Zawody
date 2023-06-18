@@ -2,7 +2,7 @@ package src;
 import java.util.Scanner;
 
 public class ZarzadzanieDruzyna {
-    public ZarzadzanieDruzyna(Druzyna druzyna){
+    public void interfejs(Druzyna druzyna){
         int opcja = 0;
         Scanner skaner = new Scanner(System.in);
         do{

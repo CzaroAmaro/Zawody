@@ -1,37 +1,27 @@
 package src;
+import java.util.Scanner;
 
 public class main {
 
     public static void main(String[] args) {
+        System.out.println("Wybierz który turniej chcesz rozegrać:");
+        System.out.println("1.Turniej Liny" + "\n" + "2.Turniej Ogni" + "\n" + "3.Turniej Siatkówki");
+        Scanner scanner = new Scanner(System.in);
 
-        Wyspa wyspa = new Wyspa();
-        Grupy grupaA = wyspa.stworzGrupe();
-        Grupy grupaB = wyspa.stworzGrupe();
-
-        grupaA.Zagraj1TureMeczuLiny();
-        grupaB.Zagraj1TureMeczuLiny();
-
-        wyspa.wyswietlGrupy(grupaA, grupaB, wyspa);
-
-        grupaA.Zagraj2TureMeczuLiny();
-        grupaB.Zagraj2TureMeczuLiny();
-
-        wyspa.wyswietlGrupy(grupaA, grupaB, wyspa);
-
-        grupaA.Zagraj3TureMeczuLiny();
-        grupaB.Zagraj3TureMeczuLiny();
-
-        wyspa.wyswietlGrupy(grupaA, grupaB, wyspa);
-
-        grupaA.ZagrajPolfinalyMeczuLiny();
-        grupaB.ZagrajPolfinalyMeczuLiny();
-
-        wyspa.wyswietlGrupy(grupaA, grupaB, wyspa);
-
-        grupaA.ZagrajFinalMeczLiny();
-        grupaB.ZagrajFinalMeczLiny();
-
-        wyspa.wyswietlGrupy(grupaA, grupaB, wyspa);
-
+        int wybor = scanner.nextInt();
+        scanner.nextLine();
+        switch (wybor){
+            case 1:
+                TurniejLiny.zagrajTurniejLiny();
+                break;
+            case 2:
+                TurniejOgni.zagrajTurniejOgni();
+                break;
+            case 3:
+                TurniejSiatkowki.zagrajTurniejSiatkowki();
+                break;
+            default:
+        System.out.println("Niepoprawna operacja");
+        }
     }
 }
